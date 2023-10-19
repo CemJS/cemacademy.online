@@ -17,24 +17,22 @@
 
 html,
 body {
-    height: var(--app-height);
+    height: 100%;
 }
 
 html {
-    scrollbar-color: $akebi_purple transparent;
+    scrollbar-color: var(--green) transparent;
     scrollbar-width: thin;
 }
 
 body {
     height: 100%;
     margin: 0px;
-    padding: 0 !important;
+    padding: 0;
     overflow: overlay;
-    color: $white;
-    background-image: url('images/background/back.jpg');
-    background-position: center center;
-    background-size: cover;
+    color: var(--white);
     width: 100%;
+    background: var(--black);
     font-family: 'Montserrat';
 
     &::-webkit-scrollbar {
@@ -49,18 +47,33 @@ body {
 
     &::-webkit-scrollbar-thumb {
         border-radius: 5px;
-        background: linear-gradient(45deg, $summer_sky 0, $blue_oyster_cult 45%, $akebi_purple 57%, $lilac_lotion 70%);
+        background: var(--green);
     }
 
     &::-webkit-scrollbar-track {
-        background-color: transparent;
+        background-color: var(--black);
     }
+}
+
+a {
+    text-decoration: none;
 }
 
 p {
     margin: 0;
 }
 
-a {
-    color: $white;
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'ProstoOne';
+    margin: 0;
 }

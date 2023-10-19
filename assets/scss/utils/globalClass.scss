@@ -1,0 +1,37 @@
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 12px 30px;
+  outline: none;
+  border-radius: var(--borderR);
+  font-size: clamp(16px, 5vw, 18px);
+  line-height: 1.5;
+
+  &__green {
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-weight: 500;
+    background-color: transparent;
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--green);
+      color: var(--black);
+    }
+  }
+}
+
+.mainTitle {
+  font-size: 60px;
+  color: var(--white);
+}
+
+.text {
+  font-family: 'Montserrat';
+  font-size: 20px;
+}

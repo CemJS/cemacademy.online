@@ -3,8 +3,9 @@ import { Cemjsx } from "cemjs-all"
 
 export default function () {
   return (
-    <footer class="footer">
+    <div class="">
+      <h2 class="about_subtitle">FQA</h2>
 
-    </footer>
+    </div>
   )
 }

@@ -1,12 +1,11 @@
 import { Cemjsx } from "cemjs-all"
-import space from '@svg/space.svg'
+import Presa from "./Presa"
 
 
 export default function () {
   return (
-    <div class="home home_container">
-      <h2 class="home_title">{this.Static.text}</h2>
-      <img class="home_logoCem" src={space}></img>
+    <div class="wrapper">
+      <Presa />
     </div>
   )
 }
