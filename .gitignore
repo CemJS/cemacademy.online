@@ -1,6 +1,4 @@
-frontends.json
-services.json
-pages.json
+
 public/assets
 node_modules
 package-lock.json
