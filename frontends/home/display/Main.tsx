@@ -1,11 +1,18 @@
 import { Cemjsx } from "cemjs-all"
 import Presa from "./Presa"
-
+import Advantages from "./Advantages"
+import Experts from "./Experts"
+import Program from "./Program"
+import Results from "./Results"
 
 export default function () {
   return (
-    <div class="wrapper">
+    <main class="wrapper">
       <Presa />
-    </div>
+      <Advantages />
+      <Experts />
+      <Program />
+      <Results />
+    </main>
   )
 }

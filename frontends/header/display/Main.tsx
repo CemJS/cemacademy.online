@@ -1,12 +1,12 @@
 import { Cemjsx } from "cemjs-all"
-import logo from '@images/logo.png'
+import logoWhite from '@svg/logoWhite.svg'
 
 
 export default function () {
   return (
     <div class="header_inner">
-      <a href="#" class="header_logo">
-        <img src={logo} alt="Academy Crypto Emergency" />
+      <a href="/" class="header_logo">
+        <img src={logoWhite} alt="Academy Crypto Emergency" />
       </a>
       <nav class="header_nav">
         <ul class="header_navList">
