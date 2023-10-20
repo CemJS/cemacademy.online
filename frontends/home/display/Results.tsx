@@ -10,7 +10,7 @@ export default function () {
           {
             this.Static.skillsResult.map(item => {
               return (
-                <p>{item}</p>
+                <p class="text">{item}</p>
               )
             })
           }
@@ -23,7 +23,7 @@ export default function () {
         {
           this.Static.callsResult.map((item) => {
             return (
-              <p>{item}</p>
+              <p class="text">{item}</p>
             )
           })
         }

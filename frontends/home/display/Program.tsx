@@ -26,7 +26,7 @@ export default function () {
                       }
                     </div>
 
-                    <p class="text">Эксперт <span class="bold">Игорь Еньшин</span></p>
+                    <p class="text">Эксперт <span class="bold">{item.expert}</span></p>
 
                     <div class="program_item-details">
                       <div class="program_item-details__circle program_item-details__circle-green">
