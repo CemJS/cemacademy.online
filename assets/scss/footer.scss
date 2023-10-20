@@ -1,2 +1,41 @@
 @import 'utils/variables.scss';
 @import 'utils/globalClass.scss';
+
+.footer{
+  &_inner{
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--borderR);
+  background: linear-gradient(358deg, #212328 26.61%, #363D42 106.65%);
+  }
+
+  &_logo{
+    height: 100px;
+
+    img{
+      height: 100%;
+    }
+  }
+
+  &_main, &_down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 45px;
+  }
+
+  &_main{
+    border-bottom: 1px solid #EFF2F5;
+  }
+
+  &_socials{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    place-items: center;
+  }
+
+  &_link{
+    color: var(--white);
+  }
+}
