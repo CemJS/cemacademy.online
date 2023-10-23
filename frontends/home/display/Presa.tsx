@@ -9,7 +9,7 @@ export default function () {
           <h1 class="title-main">Экспертный курс о том как заработать на криптовалюте</h1>
           <p>Разработано опытной командой <span class="bold">Crypto Emergency</span></p>
         </div>
-        <img src={logoBig} alt="Academy Crypto Emergency" />
+        <img class="presa-banner__image" src={logoBig} alt="Academy Crypto Emergency" />
       </div>
       <div class="presa-academy">
         <div class="presa-academy_item">

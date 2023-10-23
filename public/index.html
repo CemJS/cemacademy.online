@@ -14,17 +14,20 @@
 <body>
     <div id="app"></div>
     <div id="preloader" class="preloader_wrap">
-        <div class="preloader">
-            <div class="preloader_spinner">
-                <div class="preloader_spinner_ring"></div>
-                <div class="preloader_spinner_ring"></div>
-                <div class="preloader_spinner_ring"></div>
-                <div class="preloader_percent" ref="percent">0%</div>
-            </div>
-            <div class="preloader_progressBar">
-                <div id="progress" class="preloader_progress"></div>
-            </div>
-        </div>
+        <svg class="preloader" viewBox="0 0 128 128" width="128px" height="128px">
+            <g fill="var(--bg_preloader)">
+                <rect class="preloader__rect" rx="8" ry="8" width="64" height="64" transform="translate(64,0)" />
+                <g class="preloader__rect-g" transform="scale(-1,-1)">
+                    <rect class="preloader__rect" rx="8" ry="8" width="64" height="64" transform="translate(64,0)" />
+                </g>
+            </g>
+            <g fill="hsl(163,90%,50%)" mask="url(#pl-mask)">
+                <rect class="preloader__rect" rx="8" ry="8" width="64" height="64" transform="translate(64,0)" />
+                <g class="preloader__rect-g" transform="scale(-1,-1)">
+                    <rect class="preloader__rect" rx="8" ry="8" width="64" height="64" transform="translate(64,0)" />
+                </g>
+            </g>
+        </svg>
     </div>
 </body>
 <script>

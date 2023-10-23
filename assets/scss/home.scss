@@ -4,41 +4,50 @@
 // ===PRESA===
 .presa {
   padding-top: 115px;
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: var(--gap);
 
   &-banner {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--gap);
-    background: url('svg/example.svg');
+    display: grid;
+    grid-template-columns: 65% 35%;
+    place-items: center;
+    background: url('images/gradient.png'), linear-gradient(313deg, #212328 61.6%, #363D42 93.04%);
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
+    border-top: var(--white);
+    border-right: var(--white);
+
     border-radius: var(--borderR);
 
     &_desc {
       display: flex;
+      gap: 100px;
       flex-direction: column;
       justify-content: space-between;
       padding: 65px 0 30px 40px;
+    }
+
+    &__image {
+      width: 430px;
     }
   }
 
   &-academy {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 45% 53%;
     gap: var(--gap);
     color: var(--black);
 
 
     &_item {
       border-radius: var(--borderR);
-      padding: 40px;
+      // padding: 40px;
+      padding: 5%;
 
       &-title {
-        font-size: 36px;
+        font-size: clamp(18px, 3vw, 36px);
         line-height: 1.5;
         margin-bottom: 20px;
       }
@@ -244,8 +253,8 @@
     // gap: var(--gap);
     padding-top: 20px;
 
-    &-text{
-      .text{
+    &-text {
+      .text {
         padding-bottom: 20px;
       }
     }
@@ -269,21 +278,22 @@
 }
 
 // ===RATES===
-.rates{
+.rates {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
 
 
-  &_item{
+  &_item {
     border-radius: var(--borderR);
     padding: 35px 45px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(313deg, #212328 61.6%, #363D42 93.04%);;
+    background: linear-gradient(313deg, #212328 61.6%, #363D42 93.04%);
+    ;
 
-    &-title{
+    &-title {
       font-size: 24px;
       text-transform: uppercase;
       line-height: 1.2;
@@ -292,8 +302,8 @@
       text-align: center;
     }
 
-    &-list{
-      &__item{
+    &-list {
+      &__item {
         font-size: 16px;
         font-weight: 400;
         line-height: 1;
@@ -301,7 +311,7 @@
       }
     }
 
-    &-price{
+    &-price {
       font-size: 24px;
       line-height: 1;
       font-weight: 700;
@@ -311,41 +321,62 @@
       color: var(--black);
       margin-top: 15px;
 
-      &__green{
+      &__green {
         background: var(--green);
       }
 
-      &__yellow{
+      &__yellow {
         background: var(--yellow);
       }
 
-      &__fiolet{
+      &__fiolet {
         background: var(--fiolet);
       }
     }
 
-    &__green{
+    &__green {
       border: 3px solid var(--green);
 
-      .rates_item-title{
+      .rates_item-title {
         color: var(--green);
       }
     }
 
-    &__yellow{
+    &__yellow {
       border: 3px solid var(--yellow);
 
-      .rates_item-title{
+      .rates_item-title {
         color: var(--yellow);
       }
     }
 
-    &__fiolet{
+    &__fiolet {
       border: 3px solid var(--fiolet);
 
-      .rates_item-title{
+      .rates_item-title {
         color: var(--fiolet);
       }
     }
+  }
+}
+
+
+
+// ===MEDIA===
+@media(max-width: 1170px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  .presa {
+
+    // &-academy {
+    //   &_item {
+
+    //     &-title {
+    //       font-size: clamp(18px, 5vw, 36px);
+    //     }
+    //   }
+    // }
   }
 }
