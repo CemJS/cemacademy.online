@@ -1,34 +1,42 @@
 import { Cemjsx } from "cemjs-all"
-import platform from '@svg/platform.svg'
-import telegram from '@svg/social/telegram.svg'
-import youtube from '@svg/social/youtube.svg'
-import github from '@svg/social/github.svg'
-import email from '@svg/social/email.svg'
+import logoWhite from '@svg/logoWhite.svg'
+import logoCEM from '@svg/cem.svg'
+
+import socials from 'json/socials.json'
 
 export default function () {
   return (
-    <footer class="footer">
-      <div class="footer_inner">
-        <span>Powered by <a target="_blank" href="https://crypto-emergency.com/">Crypto Emergency</a></span>
+    <div class="footer_inner">
+      <div class="footer_main">
+        <a href="/" class="footer_logo">
+          <img src={logoWhite} alt="Academy Crypto Emergency" />
+        </a>
+
+        <a 
+          target="_blank"
+          class="footer_logo"
+          href="https://crypto-emergency.com/"
+        >
+          <img src={logoCEM} alt="Ecosystem Crypto Emergency" />
+        </a>
+
         <div class="footer_socials">
-          <a class="footer_socials_item" target="_blank" href="https://t.me/FrameworkCemJS">
-            <img src={telegram}></img>
-          </a>
-          <a class="footer_socials_item" target="_blank" href="https://www.youtube.com/@CemJS">
-            <img src={youtube}></img>
-          </a>
-          <a class="footer_socials_item" target="_blank" href="https://github.com/CemJS">
-            <img src={github}></img>
-          </a>
-          <a class="footer_socials_item" target="_blank" href="mailto:support@crypto-emergency">
-            <img src={email}></img>
-          </a>
-          <a class="footer_socials_item" target="_blank" href="https://crypto-emergency.com/" >
-            <img src={platform}></img>
-          </a>
+          {
+            socials.map(item => {
+              return(
+                <a href={item.link} class="footer_socials__item">
+                  <img src={item.img} alt={item.name} />
+                </a>
+              )
+            })
+          }
         </div>
-        <span>© 2023</span>
       </div>
-    </footer>
+      <div class="footer_down">
+        <a href="#" class="footer_link">Договор оферты</a>
+        <a href="#" class="footer_link">Политика конфиденциальности</a>
+        <a href="#" class="footer_link">Разработано командой Crypto Emergency</a>
+      </div>
+    </div>
   )
 }

@@ -1,0 +1,91 @@
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 70px;
+}
+
+.btn {
+  padding: 12px 30px;
+  outline: none;
+  border: none;
+  border-radius: var(--borderR);
+  font-size: clamp(16px, 5vw, 18px);
+  line-height: 1.5;
+
+  &__green {
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-weight: 500;
+    background-color: transparent;
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--green);
+      color: var(--black);
+    }
+  }
+
+  &__fiolet {
+    background: var(--fiolet);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border-radius: 20px;
+  }
+
+  &__white {
+    background: var(--white);
+    border-radius: 20px;
+    color: var(--black);
+    font-weight: 700;
+    padding: 15px 30px;
+    border: 1px solid var(--black);
+  }
+}
+
+// text
+
+.title {
+  &-main {
+    font-size: clamp(20px, 5vw, 60px);
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  &-section {
+    color: var(--green);
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 400;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+}
+
+.text {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+// beauty effect
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(136, 131, 213, 0.3);
+  filter: blur(100px);
+  backdrop-filter: blur(150px);
+  z-index: -1;
+}

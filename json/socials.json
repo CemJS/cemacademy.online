@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Telegram",
+    "img": "/contents/socials/telegram.svg",
+    "link": "https://t.me/cemcryptoacademy"
+  },
+  {
+    "name": "Youtube",
+    "img": "/contents/socials/youtube.svg",
+    "link": "https://t.me/cemcryptoacademy"
+  },
+  {
+    "name": "Twitter",
+    "img": "/contents/socials/twitter.svg",
+    "link": "https://t.me/cemcryptoacademy"
+  },
+  {
+    "name": "Instagram",
+    "img": "/contents/socials/instagram.svg",
+    "link": "https://t.me/cemcryptoacademy"
+  },
+  {
+    "name": "Crypto Emergency",
+    "img": "/contents/socials/site.svg",
+    "link": "https://t.me/cemcryptoacademy"
+  },
+  {
+    "name": "Facebook",
+    "img": "/contents/socials/facebook.svg",
+    "link": "https://t.me/cemcryptoacademy"
+  }
+]
