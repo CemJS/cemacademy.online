@@ -9,28 +9,64 @@
   gap: var(--gap);
 
   &-banner {
-    display: grid;
-    grid-template-columns: 65% 35%;
+    // display: grid;
+    // grid-template-columns: 65% 35%;
     place-items: center;
+    position: relative;
     background: url('images/gradient.png'), linear-gradient(313deg, #212328 61.6%, #363D42 93.04%);
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
     border-top: var(--white);
     border-right: var(--white);
-
     border-radius: var(--borderR);
+    overflow: hidden;
+    padding: 30px;
+    height: 415px;
+
+    &::before {
+      content: '';
+      background: conic-gradient(transparent 270deg, var(--white), transparent);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      aspect-ratio: 1;
+      width: 100%;
+      animation: rotateBorder 4s linear infinite;
+    }
+
+    &::after {
+      content: '';
+      background: inherit;
+      border-radius: inherit;
+      border-radius: inherit;
+      position: absolute;
+      inset: 3px;
+      height: calc(100% - 2 * 3px);
+      width: calc(100% - 2 * 3px);
+
+    }
+
 
     &_desc {
       display: flex;
       gap: 100px;
+      max-width: 820px;
+      position: relative;
+      z-index: 2;
       flex-direction: column;
       justify-content: space-between;
-      padding: 65px 0 30px 40px;
+      padding: 20px 0 30px 40px;
     }
 
     &__image {
       width: 430px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
     }
   }
 
@@ -137,7 +173,7 @@
 .program {
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
+  gap: 25px;
 
   &_item {
     background-image: linear-gradient(180deg, #212328 0%, #212328 100%);
@@ -361,8 +397,20 @@
 }
 
 
+// ===ANIMATION===
+@keyframes rotateBorder {
+  from {
+    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+  }
+}
+
 
 // ===MEDIA===
+
 @media(max-width: 1170px) {
   .wrapper {
     padding: 0 10px;
