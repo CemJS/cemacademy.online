@@ -6,15 +6,15 @@
     top: 0;
     z-index: 100;
     width: 100%;
-    background: var(--black);
+    background: rgb(25 27 33 / 90%);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--green);
 
     &_inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // gap: 90px;
-        gap: clamp(35px, 2vw, 90px);
+        gap: var(--padding);
         padding: 0.5rem 0;
     }
 
@@ -59,10 +59,6 @@
 // ===MEDIA===
 @media(max-width: 800px) {
     .header {
-        // &_inner{
-        //     ju
-        // }
-
         &_nav {
             display: none;
         }
@@ -129,13 +125,14 @@
                 left: 100%;
                 bottom: 0;
                 z-index: 90;
-                width: 450px;
-                height: 100%;
+                width: 350px;
+                height: 100vh;
                 padding: 25px;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                background: var(--bg_gradient);
+                background: rgba(25, 27, 33, 0.99);
+                backdrop-filter: blur(10px);
                 transform: translateX(0px);
                 transition-delay: 0.25s;
                 transition: transform 0.4s ease 0s;

@@ -70,8 +70,6 @@ export default function () {
         <RenderMobileMenu items={menu} />
       </div>
 
-
-
     </div>
   )
 }

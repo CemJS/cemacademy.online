@@ -4,17 +4,19 @@
 }
 
 .section {
-  margin-bottom: 70px;
+  // margin-bottom: 70px;
+  margin-bottom: 7vh;
 }
 
 .btn {
-  // padding: 12px 30px;
-  padding: 0.8rem 2rem;
+  padding: 1vw 2vw;
   outline: none;
+  display: block;
+  width: fit-content;
   border: none;
   border-radius: var(--borderR);
   font-size: clamp(16px, 2vw, 18px);
-  line-height: 1.5;
+  line-height: 133%;
 
   &__green {
     border: 1px solid var(--green);
@@ -34,7 +36,6 @@
   &__fiolet {
     background: var(--fiolet);
     font-weight: 700;
-    line-height: 1.2;
     color: var(--white);
     padding: 15px 30px;
     text-transform: uppercase;
@@ -52,20 +53,23 @@
 }
 
 // text
-
 .title {
   &-main {
     font-size: clamp(20px, 5vw, 60px);
     color: var(--white);
     font-weight: 500;
+    line-height: 133%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
   }
 
   &-section {
     color: var(--green);
     font-size: clamp(20px, 5vw, 70px);
-    line-height: 1;
+    line-height: 133%;
     font-weight: 400;
-    padding-bottom: 100px;
+    padding-bottom: 5vw;
     text-align: center;
   }
 }
@@ -73,7 +77,7 @@
 .text {
   font-family: 'Montserrat';
   font-size: clamp(16px, 2vw, 20px);
-  line-height: 1.5;
+  line-height: 133%;
   font-weight: 500;
 }
 
