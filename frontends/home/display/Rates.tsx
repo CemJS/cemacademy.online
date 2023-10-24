@@ -16,7 +16,10 @@ export default function () {
                     {
                       item.about.map(el => {
                         return(
-                          <li class="rates_item-list__item">{el}</li>
+                          <li class="rates_item-list__item">
+                            <img class="rates_item__icon" src={el.icon} alt="Academy Crypto Emergency" />
+                            <span>{el.text}</span>
+                          </li>
                         )
                       })
                     }
@@ -25,8 +28,8 @@ export default function () {
                 
                 {
                   item?.bonus ? 
-                  <div class="rates_item-bonus">
-                    <span>{item.bonus}</span>
+                  <div class={["rates_item-bonus", `rates_item-bonus__${item.color}`]}>
+                    <span class="rates_item-bonus__text">{item.bonus}</span>
                   </div> : null
                 }
 

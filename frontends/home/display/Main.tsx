@@ -5,6 +5,7 @@ import Experts from "./Experts"
 import Program from "./Program"
 import Results from "./Results"
 import Rates from "./Rates"
+import ScrollTop from "./ScrollTop"
 
 export default function () {
   return (
@@ -12,9 +13,10 @@ export default function () {
       <Presa />
       <Advantages />
       <Experts />
-      <Program />
+      {/* <Program /> */}
       <Results />
       <Rates />
+      <ScrollTop />
     </main>
   )
 }
