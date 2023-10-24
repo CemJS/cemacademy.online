@@ -1,13 +1,19 @@
 import { Cemjsx } from "cemjs-all"
 import logoBig from '@images/arrow.png'
+import logoCem from '@svg/cryptoEmergency.svg'
 
 export default function () {
   return (
     <section class="presa section">
       <div class="presa-banner">
         <div class="presa-banner_desc">
-          <h1 class="title-main">Экспертный курс о том как заработать на криптовалюте</h1>
-          <p>Разработано опытной командой <span class="bold">Crypto Emergency</span></p>
+          <h1 class="title-main">
+            <span>Экспертный курс о том</span>
+            <span>как заработать</span>
+            <span>на криптовалюте</span>
+          </h1>
+          <p class="text">Разработано опытной командой <span class="bold">Crypto Emergency</span>
+            {/* <img class="presa_icon" src={logoCem} alt="Crypto Emergency" /></p> */}</p>
         </div>
         <img class="presa-banner__image" src={logoBig} alt="Academy Crypto Emergency" />
       </div>

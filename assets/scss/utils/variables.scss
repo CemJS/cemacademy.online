@@ -9,6 +9,13 @@
   --yellow: #EAD15E;
   --bg_gradient: linear-gradient(358deg, #212328 26.61%, #363D42 106.65%);
 
-  --gap: 3%;
-  --borderR: 45px;
+  --gap: 2vw;
+  --padding: 3vw;
+  --mb: 1.5vw;
+  --borderR: clamp(25px, 3vw, 45px);
+  --title: clamp(20px, 3.5vw, 40px)
+}
+
+@function rem($value, $delimeter) {
+  @return $value * 1rem
 }

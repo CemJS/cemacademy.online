@@ -9,9 +9,9 @@ export default function () {
             <a
                 href="/"
                 onclick={this.Fn.link}
-                class="btn btn_timing"
+                class="btn btn_green"
             >
-                <span>На главную</span>
+                На главную
             </a>
         </div>
     )
