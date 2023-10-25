@@ -2,11 +2,26 @@
   {
     "title": "Стандартный",
     "about": [
-      "доступ в общий чат",
-      "8 экспертных вебинаров",
-      "вопросы эксперту во время эфира",
-      "1 еженедельный базовый вебинар с экспертом",
-      "длительность курса 2 месяца"
+      {
+        "icon": "/contents/rates/standart/people.svg",
+        "text": "доступ в общий чат"
+      },
+      {
+        "icon": "/contents/rates/standart/user.svg",
+        "text": "8 экспертных вебинаров"
+      },
+      {
+        "icon": "/contents/rates/standart/question.svg",
+        "text": "вопросы эксперту во время эфира"
+      },
+      {
+        "icon": "/contents/rates/standart/star.svg",
+        "text": "1 еженедельный базовый вебинар с экспертом"
+      },
+      {
+        "icon": "/contents/rates/standart/time.svg",
+        "text": "длительность курса 2 месяца"
+      }
     ],
     "price": "45 000 руб.",
     "color": "green"
@@ -14,14 +29,38 @@
   {
     "title": "Расширенный",
     "about": [
-      "доступ в общий чат",
-      "16 экспертных вебинаров",
-      "запись эфиров на 3 месяца",
-      "2 вебинара (общий+углубленный)",
-      "вопросы эксперту во время эфира",
-      "опция + 1 консультация с экспертом",
-      "ДЗ в виде тестирования ",
-      "длительность курса 2 месяца"
+      {
+        "icon": "/contents/rates/advanced/people.svg",
+        "text": "доступ в общий чат"
+      },
+      {
+        "icon": "/contents/rates/advanced/user.svg",
+        "text": "16 экспертных вебинаров"
+      },
+      {
+        "icon": "/contents/rates/advanced/play.svg",
+        "text": "запись эфиров на 3 месяца"
+      },
+      {
+        "icon": "/contents/rates/advanced/star.svg",
+        "text": "2 вебинара (общий+углубленный)"
+      },
+      {
+        "icon": "/contents/rates/advanced/question.svg",
+        "text": "вопросы эксперту во время эфира"
+      },
+      {
+        "icon": "/contents/rates/advanced/doc.svg",
+        "text": "опция + 1 консультация с экспертом"
+      },
+      {
+        "icon": "/contents/rates/advanced/homework.svg",
+        "text": "ДЗ в виде тестирования"
+      },
+      {
+        "icon": "/contents/rates/advanced/time.svg",
+        "text": "длительность курса 2 месяца"
+      }
     ],
     "price": "90 000 руб.",
     "color": "yellow"
@@ -29,14 +68,38 @@
   {
     "title": "VIP",
     "about": [
-      "доступ в VIP-чат с экспертами",
-      "16 экспертных вебинаров",
-      "запись эфиров в закрытом канале на 6 мес",
-      "2 вебинара (общий+углубленный)",
-      "4 личные консультации с экспертом",
-      "ДЗ в виде теста + разбор",
-      "инструкции по работе с сервисами, кошельками и биржами",
-      "длительность курса 2 месяца"
+      {
+        "icon": "/contents/rates/vip/chat.svg",
+        "text": "доступ в VIP-чат с экспертами"
+      },
+      {
+        "icon": "/contents/rates/vip/user.svg",
+        "text": "16 экспертных вебинаров"
+      },
+      {
+        "icon": "/contents/rates/vip/play.svg",
+        "text": "запись эфиров в закрытом канале на 6 мес"
+      },
+      {
+        "icon": "/contents/rates/vip/star.svg",
+        "text": "2 вебинара (общий+углубленный)"
+      },
+      {
+        "icon": "/contents/rates/vip/list.svg",
+        "text": "4 личные консультации с экспертом"
+      },
+      {
+        "icon": "/contents/rates/vip/homework.svg",
+        "text": "ДЗ в виде теста + разбор"
+      },
+      {
+        "icon": "/contents/rates/vip/book.svg",
+        "text": "инструкции по работе с сервисами, кошельками и биржами"
+      },
+      {
+        "icon": "/contents/rates/vip/time.svg",
+        "text": "длительность курса 2 месяца"
+      }
     ],
     "price": "250 000 руб.",
     "color": "fiolet",

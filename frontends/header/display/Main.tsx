@@ -8,8 +8,20 @@ const RenderMenu = function ({ items }) {
       {
         items.map((item) => {
           return (
-            <li>
-              <a href={item.link} class="header_navList__item">{item.name}</a>
+            <li class="navLink">
+              <a
+                href={item.link}
+                class="header_navList-item"
+                onclick={(e) => {
+                  e.preventDefault()
+                  window.scrollTo({
+                    top: document.querySelector(item.link).offsetTop,
+                    behavior: "smooth"
+                  })
+                }}
+              >
+                {item.name}
+              </a>
             </li>
           )
         })
@@ -25,7 +37,21 @@ const RenderMobileMenu = function ({ items }) {
         items.map((item) => {
           return (
             <li>
-              <a href={item.link} class="header_mobile-list__item">{item.name}</a>
+              <a
+                href={item.link}
+                class="header_mobile-list__item"
+                onclick={(e) => {
+                  e.preventDefault()
+                  window.scrollTo({
+                    top: document.querySelector(item.link).offsetTop,
+                    behavior: "smooth"
+                  })
+                  this.Variable.openSidebar = false;
+                  this.Fn.initAll();
+                }}
+              >
+                {item.name}
+              </a>
             </li>
           )
         })
@@ -52,12 +78,11 @@ export default function () {
           Записаться
         </a>
         <div
-          class="header_burger"
           ref="burger"
+          class={["header_burger", this.Variable.openSidebar ? "header_burger__active" : null]}
           onclick={() => {
-            this.Ref.burger.classList.toggle('header_burger__active')
-            this.Ref.mobileMenu.classList.toggle('header_mobile-menu__active')
-            this.init()
+            this.Variable.openSidebar = !this.Variable.openSidebar;
+            this.Fn.initAll();
           }}
         >
           <span class="header_burger__item"></span>
@@ -66,7 +91,13 @@ export default function () {
         </div>
       </div>
 
-      <div class="header_mobile-menu" ref="mobileMenu">
+      <div
+        ref="mobileMenu"
+        class={[
+          "header_mobile-menu",
+          this.Variable.openSidebar ? "header_mobile-menu__active" : null
+        ]}
+      >
         <RenderMobileMenu items={menu} />
       </div>
 

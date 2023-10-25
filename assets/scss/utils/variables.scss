@@ -7,6 +7,7 @@
   --light: #EFF2F5;
   --fiolet: #8771CC;
   --yellow: #EAD15E;
+  --grey: #D9D9D9;
   --bg_gradient: linear-gradient(358deg, #212328 26.61%, #363D42 106.65%);
 
   --gap: 2vw;
@@ -16,6 +17,8 @@
   --title: clamp(20px, 3.5vw, 40px)
 }
 
-@function rem($value, $delimeter) {
-  @return $value * 1rem
+@media(max-width: 535px) {
+  :root {
+    --padding: 5vw;
+  }
 }

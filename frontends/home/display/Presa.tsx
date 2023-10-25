@@ -4,7 +4,7 @@ import logoCem from '@svg/cryptoEmergency.svg'
 
 export default function () {
   return (
-    <section class="presa section">
+    <section class="presa section" ref="mainSection">
       <div class="presa-banner">
         <div class="presa-banner_desc">
           <h1 class="title-main">
