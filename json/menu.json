@@ -1,18 +1,18 @@
 [
   {
-    "name": "Программа",
-    "link": "#"
-  },
-  {
     "name": "Эксперты",
-    "link": "#"
+    "link": "#experts"
   },
   {
-    "name": "Тарифы",
-    "link": "#"
+    "name": "Программа",
+    "link": "#program"
   },
   {
     "name": "Результаты",
-    "link": "#"
+    "link": "#results"
+  },
+  {
+    "name": "Тарифы",
+    "link": "#rates"
   }
 ]

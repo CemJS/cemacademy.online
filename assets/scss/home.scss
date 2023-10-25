@@ -158,6 +158,10 @@
     flex-direction: column;
     gap: 1.5vw;
 
+    &__user {
+      display: none;
+    }
+
     &__name {
       font-size: var(--title);
       font-weight: 400;
@@ -167,7 +171,7 @@
     &__skills {
       font-weight: 500;
       line-height: 122%;
-      font-size: clamp(18px, 2.5vw, 24px);
+      font-size: clamp(16px, 2.5vw, 24px);
     }
 
     &__desc {
@@ -176,6 +180,7 @@
       line-height: 125%;
       max-width: 65%;
     }
+
   }
 }
 
@@ -187,7 +192,6 @@
 
   &_item {
     background-image: linear-gradient(180deg, #212328 0%, #212328 100%);
-    ;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: var(--borderR);
     padding: 4vw;
@@ -202,19 +206,19 @@
       h3 {
         font-size: var(--title);
         font-weight: 700;
-        line-height: 100%;
+        line-height: 115%;
         font-family: 'Montserrat';
       }
     }
 
     &-info {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 40% 60%;
       gap: var(--gap);
-      padding-top: 3vw;
+      padding-top: var(--padding);
 
       &__subtitle {
-        font-size: clamp(18px, 5vw, 24px);
+        font-size: clamp(18px, 3vw, 24px);
         font-weight: 600;
         text-transform: uppercase;
         line-height: 122%;
@@ -223,11 +227,39 @@
       }
     }
 
+    &-expert {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      &__circle {
+        width: 12.5rem;
+        height: 12.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid var(--green);
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
     &-content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: var(--gap);
+      background: #32383D;
+      padding: var(--padding);
+      border-radius: var(--borderR);
     }
 
     &-details {
@@ -277,13 +309,18 @@
       line-height: 1.2;
       padding-bottom: 10px;
     }
+
+    &-result {
+      padding-top: var(--padding);
+    }
+
   }
 }
 
 // ===RESULTS===
 .results {
   background: #F3F4F5;
-  border: 2px solid #D9D9D9;
+  border: 2px solid var(--grey);
   border-radius: var(--borderR);
   color: var(--black);
   padding: 3vw 4vw;
@@ -347,7 +384,7 @@
       text-align: center;
     }
 
-    &__icon{
+    &__icon {
       width: 25px;
     }
 
@@ -367,7 +404,7 @@
 
     &-price {
       margin: 0 2vw;
-      font-size: 24px;
+      font-size: clamp(18px, 5vw, 24px);
       line-height: 1;
       font-weight: 700;
       padding: 15px 30px;
@@ -389,7 +426,7 @@
       }
     }
 
-    &-bonus{
+    &-bonus {
       width: 100%;
       background: var(--fiolet);
       padding: 1.5vw 2vw;
@@ -397,7 +434,7 @@
       justify-content: center;
       align-items: center;
 
-      &__text{
+      &__text {
         font-size: 14px;
         line-height: 125%;
         text-align: center;
@@ -432,10 +469,11 @@
 }
 
 // ===SCROLLTOP===
-.scrollTop{
-  width: 5vw;
-  height: 5vw;
-  padding: 25px;
+.scrollTop {
+  width: 4rem;
+  height: 4rem;
+  // padding: 1.5rem;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,10 +482,20 @@
   bottom: 25px;
   z-index: 111;
   border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out 0s, visibility 0.5s ease-in-out 0s;
   background-image: linear-gradient(180deg, #212328 0%, #212328 100%);
   -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+
+  &__show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
 }
 
 // ===ANIMATION===
@@ -472,33 +520,33 @@
     padding-top: 100px;
   }
 
-  .rates{
+  .rates {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
       'rateGreen rateYellow'
       'rateFiolet rateFiolet';
 
-    &_item{
-      &__green{
+    &_item {
+      &__green {
         grid-area: rateGreen;
       }
 
-      &__yellow{
+      &__yellow {
         grid-area: rateYellow;
       }
 
-      &__fiolet{
+      &__fiolet {
         grid-area: rateFiolet;
 
-        .rates_item-list{
+        .rates_item-list {
           display: grid;
           column-gap: var(--gap);
           grid-template-columns: repeat(2, 1fr);
         }
       }
 
-      &-bonus{
-        &__text{
+      &-bonus {
+        &__text {
           font-size: clamp(16px, 3.5vw, 18px);
         }
       }
@@ -516,7 +564,7 @@
       background-size: 187px;
 
       &__skills {
-        max-width: 85%;
+        max-width: 80%;
       }
     }
   }
@@ -563,21 +611,75 @@
     max-width: 100%;
   }
 
-  .rates{
+  .rates {
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       'rateGreen'
       'rateYellow'
       'rateFiolet';
 
-    &_item{
-      &__fiolet{
+    &_item {
+      &__fiolet {
         grid-area: rateFiolet;
 
-        .rates_item-list{
+        .rates_item-list {
           grid-template-columns: 1fr;
         }
       }
     }
+  }
+
+  .program {
+    &_item {
+      &-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media(max-width: 535px) {
+  .experts {
+
+    &_item {
+      position: relative;
+      background-image: none !important;
+
+      &__name {
+        padding-top: 1.5vw;
+      }
+
+      &__skills {
+        max-width: 70%;
+        padding: 2vw 0;
+      }
+
+      &__desc {
+        max-width: 100%;
+      }
+
+      &__user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 125px;
+        width: 115px;
+        border-top-right-radius: var(--borderR);
+        border-bottom-left-radius: var(--borderR);
+        border: 3px solid var(--grey);
+        background-color: var(--grey);
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
   }
 }

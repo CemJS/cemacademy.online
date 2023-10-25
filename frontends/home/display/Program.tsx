@@ -3,7 +3,7 @@ import program from 'json/program.json'
 
 export default function () {
   return (
-    <section class="section">
+    <section class="section" id="program">
       <h2 class="title-section">Программа</h2>
       <div class="program">
         {
@@ -14,6 +14,14 @@ export default function () {
                   <h3>{item.title}</h3>
                 </div>
                 <div class="program_item-info">
+
+                  <div class="program_item-expert">
+                    <div class="program_item-expert__circle">
+                      <img src={item.expertPhoto} alt={item.expert} />
+                    </div>
+                    <p class="text">Эксперт <span class="bold">{item.expert}</span></p>
+                  </div>
+
                   <div class="program_item-content">
                     <div>
                       <span class="program_item-info__subtitle">Содержание</span>
@@ -26,9 +34,7 @@ export default function () {
                       }
                     </div>
 
-                    <p class="text">Эксперт <span class="bold">{item.expert}</span></p>
-
-                    <div class="program_item-details">
+                    {/* <div class="program_item-details">
                       <div class="program_item-details__circle program_item-details__circle-green">
                         <span>6</span>
                         <span>недель</span>
@@ -41,60 +47,61 @@ export default function () {
                         <span>презентация</span>
                         <span>вебинаров</span>
                       </div>
-                    </div>
+                    </div> */}
 
                   </div>
-                  <div class="program_item-result">
-                    <span class="program_item-info__subtitle">Результат</span>
-                    {
-                      item.result.map(el => {
-                        return (
-                          <div>
-                            {
-                              el?.text ?
-                                <div>
-                                  {
-                                    el.text.map((p) => {
-                                      return (
-                                        <p class="program_item__text">{p}</p>
-                                      )
-                                    })
-                                  }
-                                </div> : null
-                            }
+                </div>
 
-                            {
-                              el?.list ?
-                                <div>
-                                  {
-                                    el.list.map(list => {
-                                      return (
-                                        <div>
-                                          <p class="text">{list.title}</p>
-                                          <ul>
-                                            {
-                                              list.items.map((li) => {
-                                                return (
-                                                  <li class="program_item__text">{`- ${li}`}</li>
-                                                )
-                                              })
-                                            }
-                                          </ul>
-                                        </div>
+                <div class="program_item-result">
+                  <span class="program_item-info__subtitle">Результат</span>
+                  {
+                    item.result.map(el => {
+                      return (
+                        <div>
+                          {
+                            el?.text ?
+                              <div>
+                                {
+                                  el.text.map((p) => {
+                                    return (
+                                      <p class="program_item__text">{p}</p>
+                                    )
+                                  })
+                                }
+                              </div> : null
+                          }
 
-                                      )
-                                    })
-                                  }
+                          {
+                            el?.list ?
+                              <div>
+                                {
+                                  el.list.map(list => {
+                                    return (
+                                      <div>
+                                        <p class="text">{list.title}</p>
+                                        <ul>
+                                          {
+                                            list.items.map((li) => {
+                                              return (
+                                                <li class="program_item__text">{`- ${li}`}</li>
+                                              )
+                                            })
+                                          }
+                                        </ul>
+                                      </div>
 
-                                </div> : null
-                            }
+                                    )
+                                  })
+                                }
+
+                              </div> : null
+                          }
 
 
-                          </div>
-                        )
-                      })
-                    }
-                  </div>
+                        </div>
+                      )
+                    })
+                  }
                 </div>
 
               </div>

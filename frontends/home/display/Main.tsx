@@ -13,7 +13,7 @@ export default function () {
       <Presa />
       <Advantages />
       <Experts />
-      {/* <Program /> */}
+      <Program />
       <Results />
       <Rates />
       <ScrollTop />

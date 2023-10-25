@@ -3,7 +3,7 @@ import done from '@svg/done.svg'
 
 export default function () {
   return (
-    <section class="section results">
+    <section class="section results" id="results">
       <h2 class="results_title">Результаты</h2>
       <div class="results_info">
         <div class="results_info-text">

@@ -4,7 +4,7 @@ import advantages from 'json/advantages.json'
 
 export default function () {
   return (
-    <section class="section advantages_section">
+    <section class="section advantages_section" id="advanteges">
       <h2 class="title-section">Преимущества обучения в академии Crypto Emergency</h2>
       <ul class="advantages">
         {
