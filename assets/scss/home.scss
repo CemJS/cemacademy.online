@@ -195,6 +195,9 @@
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: var(--borderR);
     padding: 4vw;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 
     &__title {
       border: 1px solid var(--green);
@@ -212,9 +215,6 @@
     }
 
     &-info {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      gap: var(--gap);
       padding-top: var(--padding);
 
       &__subtitle {
@@ -227,81 +227,11 @@
       }
     }
 
-    &-expert {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-
-      &__circle {
-        width: 12.5rem;
-        height: 12.5rem;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 3px solid var(--green);
-        overflow: hidden;
-
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-
-    &-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: var(--gap);
-      background: #32383D;
-      padding: var(--padding);
-      border-radius: var(--borderR);
-    }
-
-    &-details {
+    &-list {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: var(--gap);
-      color: var(--black);
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 0.9;
-
-      &__circle,
-      &__rect {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 7px;
-      }
-
-      &__circle {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-
-        &-green {
-          background: var(--green);
-        }
-
-        &-fiolet {
-          background: var(--fiolet);
-        }
-      }
-
-      &__rect {
-        border-radius: var(--borderR);
-        background: var(--orange);
-        padding: 15px 30px;
-        height: fit-content;
-      }
-
+      padding-top: var(--padding);
     }
 
     &__text {
@@ -315,6 +245,30 @@
     }
 
   }
+
+  &-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150px);
+    backdrop-filter: blur(150px);
+    -webkit-backdrop-filter: blur(150px);
+    width: 300px;
+    height: 300px;
+
+    &__orange {
+      background: rgba(233, 155, 103, 0.22);
+      bottom: 15%;
+      right: 25%;
+    }
+
+    &__green {
+      background: rgba(162, 239, 154, 0.37);
+      bottom: 1%;
+      left: 8%;
+    }
+  }
+
 }
 
 // ===RESULTS===

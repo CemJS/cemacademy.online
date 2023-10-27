@@ -11,45 +11,12 @@ export default function () {
             return (
               <div class="program_item">
                 <div class="program_item__title">
-                  <h3>{item.title}</h3>
+                  {item.title ? <h3>{item?.title}</h3> : null}
                 </div>
+
                 <div class="program_item-info">
-
-                  <div class="program_item-expert">
-                    <div class="program_item-expert__circle">
-                      <img src={item.expertPhoto} alt={item.expert} />
-                    </div>
-                    <p class="text">Эксперт <span class="bold">{item.expert}</span></p>
-                  </div>
-
-                  <div class="program_item-content">
-                    <div>
-                      <span class="program_item-info__subtitle">Содержание</span>
-                      {
-                        item.content.map((el) => {
-                          return (
-                            <p class="program_item__text">{el}</p>
-                          )
-                        })
-                      }
-                    </div>
-
-                    {/* <div class="program_item-details">
-                      <div class="program_item-details__circle program_item-details__circle-green">
-                        <span>6</span>
-                        <span>недель</span>
-                      </div>
-                      <div class="program_item-details__circle program_item-details__circle-fiolet">
-                        <span>24</span>
-                        <span>часа</span>
-                      </div>
-                      <div class="program_item-details__rect">
-                        <span>презентация</span>
-                        <span>вебинаров</span>
-                      </div>
-                    </div> */}
-
-                  </div>
+                  <h4 class="program_item-info__subtitle">Тема: {item.thema}</h4>
+                  <p class="text">Эксперт <span class="bold">{item.expert}</span></p>
                 </div>
 
                 <div class="program_item-result">
@@ -73,7 +40,9 @@ export default function () {
 
                           {
                             el?.list ?
-                              <div>
+                              <div
+                                class={[el.list.length >= 2 ? "program_item-list" : null]}
+                              >
                                 {
                                   el.list.map(list => {
                                     return (
@@ -103,7 +72,8 @@ export default function () {
                     })
                   }
                 </div>
-
+                <div class="program-circle program-circle__orange"></div>
+                <div class="program-circle program-circle__green"></div>
               </div>
             )
           })
