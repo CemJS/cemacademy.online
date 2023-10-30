@@ -14,12 +14,14 @@
   --gap: 2vw;
   --padding: 3vw;
   --mb: 1.5vw;
-  --borderR: clamp(25px, 3vw, 45px);
-  --title: clamp(20px, 3.5vw, 40px)
+  --borderR: clamp(1.5rem, 3vw, 2.8rem);
+  --btnBorderR: clamp(1rem, 3vw, 1.25rem);
+  --title: clamp(1.25rem, 3.5vw, 2.8rem);
 }
 
 @media(max-width: 535px) {
   :root {
     --padding: 5vw;
+    --gap: 3vw;
   }
 }

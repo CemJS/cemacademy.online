@@ -1,6 +1,8 @@
 import { Cemjsx } from "cemjs-all"
 import logoAcademy from '@images/academy.png'
 import logoCEM from '@images/CryptoEmergency.png'
+import logoCEMmini from '@svg/cryptoEmergency.svg'
+import telegram from '@svg/telegram.svg'
 
 import socials from 'json/socials.json'
 
@@ -10,6 +12,10 @@ export default function () {
       <div class="footer_main">
         <a href="/" class="footer_logo">
           <img src={logoAcademy} alt="Academy Crypto Emergency" />
+        </a>
+
+        <a href="https://t.me/cemcryptoacademy" target="_blank" class="footer_link">
+          <img src={telegram} alt="Academy Crypto Emergency" />
         </a>
 
         <a
@@ -24,7 +30,7 @@ export default function () {
           {
             socials.map(item => {
               return (
-                <a href={item.link} class="footer_socials__item">
+                <a href={item.link} class="footer_socials__item" onclick={this.Fn.link}>
                   <img src={item.img} alt={item.name} />
                 </a>
               )
@@ -33,9 +39,11 @@ export default function () {
         </div>
       </div>
       <div class="footer_down">
-        <a href="#" class="footer_link">Договор оферты</a>
-        <a href="#" class="footer_link">Политика конфиденциальности</a>
-        <span>Разработано командой Crypto Emergency</span>
+        <p class="text">
+          Разработано командой
+          <span class="bold"> Crypto Emergency</span>
+        </p>
+        <img class="footer_down__icon" src={logoCEMmini} alt="Crypto Emergency" />
       </div>
     </div>
   )

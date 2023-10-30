@@ -1,5 +1,4 @@
 export const finish = function (e) {
-
   this.Static.sections = document.querySelectorAll('.section')
   this.Static.navLinks = document.querySelectorAll('.header_navList-item')
   this.Static.menu = document.querySelector('.header_navList')
@@ -32,6 +31,3 @@ export const finish = function (e) {
   })
 }
 
-// export const scroll = function (e) {
-//   console.log('=39d836=', e)
-// }

@@ -15,7 +15,7 @@ const RenderMenu = function ({ items }) {
                 onclick={(e) => {
                   e.preventDefault()
                   window.scrollTo({
-                    top: document.querySelector(item.link).offsetTop,
+                    top: document.querySelector(item.link).offsetTop - 75,
                     behavior: "smooth"
                   })
                 }}
@@ -43,7 +43,7 @@ const RenderMobileMenu = function ({ items }) {
                 onclick={(e) => {
                   e.preventDefault()
                   window.scrollTo({
-                    top: document.querySelector(item.link).offsetTop,
+                    top: document.querySelector(item.link).offsetTop - 85,
                     behavior: "smooth"
                   })
                   this.Variable.openSidebar = false;

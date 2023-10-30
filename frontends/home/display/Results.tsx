@@ -28,7 +28,7 @@ export default function () {
           })
         }
       </div>
-      <a href="https://t.me/dmitriibelov" class="btn btn__white">Принять участие</a>
+      <a href="https://t.me/dmitriibelov" class="btn btn__white" target="blank">Принять участие</a>
     </section>
   )
 }
