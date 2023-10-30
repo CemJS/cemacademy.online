@@ -10,9 +10,14 @@ export default function () {
           program.map(item => {
             return (
               <div class="program_item">
-                <div class="program_item__title">
-                  {item.title ? <h3>{item?.title}</h3> : null}
-                </div>
+
+                {
+                  item?.title ?
+
+                    <div class="program_item__title">
+                      <h3>{item.title}</h3>
+                    </div> : null
+                }
 
                 <div class="program_item-info">
                   <h4 class="program_item-info__subtitle">Тема: {item.thema}</h4>
@@ -72,8 +77,8 @@ export default function () {
                     })
                   }
                 </div>
-                <div class="program-circle program-circle__orange"></div>
-                <div class="program-circle program-circle__green"></div>
+                <div class="circle program-circle__orange"></div>
+                <div class="circle program-circle__green"></div>
               </div>
             )
           })

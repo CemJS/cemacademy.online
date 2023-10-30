@@ -8,7 +8,7 @@ export default function () {
       ref="scrollTop"
       onclick={() => {
         window.scrollTo({
-          top: this.Ref.mainSection.offsetTop,
+          top: 0,
           behavior: "smooth"
         })
       }}
