@@ -72,7 +72,7 @@ export default function () {
       <div class="header_btns">
         <a
           class="btn btn__green"
-          href="https://t.me/dmitriibelov"
+          href="https://t.me/cemcryptoacademy"
           target="_blank"
         >
           Записаться
