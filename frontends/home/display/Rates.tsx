@@ -33,7 +33,7 @@ export default function () {
                     </div> : null
                 }
 
-                <span class={["rates_item-price", `rates_item-price__${item.color}`]}>{item.price}</span>
+                <a href={item.link} class={["rates_item-price", `rates_item-price__${item.color}`]} target="_blank">{item.price}</a>
 
               </div>
             )
