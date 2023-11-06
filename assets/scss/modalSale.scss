@@ -1,0 +1,66 @@
+@import 'utils/variables.scss';
+@import 'utils/globalClass.scss';
+
+.sale {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  z-index: 9;
+  transform: translate(-50%, 100%);
+  transition: 0.5s ease-in-out;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(180deg, #BAEDB2 0%, #3EAC77 89.57%);
+
+  &__active {
+    transform: translate(-50%, 0%);
+  }
+
+
+  &_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    color: var(--black);
+    font-size: 1.5rem;
+    z-index: 20;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+  &_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    .btn__white {
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  &_text {
+    font-size: 1.5rem;
+    color: var(--black);
+    font-weight: 600;
+
+    &__accent {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-left: 0.5rem;
+      color: var(--red);
+    }
+  }
+}
+
+@keyframes saleUp {}

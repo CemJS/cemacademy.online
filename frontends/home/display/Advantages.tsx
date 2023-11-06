@@ -18,7 +18,13 @@ export default function () {
           })
         }
       </ul>
-      <a href="https://t.me/cemcryptoacademy" class="btn btn__fiolet" target="_blank">Вступить уже сейчас!</a>
+      <button
+        class="btn btn__fiolet"
+        onclick={() => this.Fn.initOne({
+          name: "modalOrder",
+          data: { title: "Записаться на курс прямо сейчас!" }
+        })}
+      >Вступить уже сейчас!</button>
       <div class="circle"></div>
     </section>
   )

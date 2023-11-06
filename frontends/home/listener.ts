@@ -21,6 +21,10 @@ export const finish = function (e) {
           if (this.Static.advantages == entry.target) {
             this.Ref.scrollTop.classList.remove('scrollTop__show')
           }
+
+          if (entry.target.id == 'program') {
+            this.Ref.question.classList.add('question__show')
+          }
         })
       }
     })

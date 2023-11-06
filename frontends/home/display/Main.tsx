@@ -6,6 +6,7 @@ import Program from "./Program"
 import Results from "./Results"
 import Rates from "./Rates"
 import ScrollTop from "./ScrollTop"
+import Question from "./Question"
 
 export default function () {
   return (
@@ -17,6 +18,7 @@ export default function () {
       <Results />
       <Rates />
       <ScrollTop />
+      <Question />
     </main>
   )
 }

@@ -568,6 +568,32 @@
   }
 }
 
+// ===QUESTION===
+.question {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 7rem;
+  z-index: 80;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s ease-in-out 0s, visibility 0.5s ease-in-out 0s;
+  -o-transition: opacity 0.5s ease-in-out 0s, visibility 0.5s ease-in-out 0s;
+  transition: opacity 0.5s ease-in-out 0s, visibility 0.5s ease-in-out 0s;
+  -webkit-box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+
+  &__show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
 // ===ANIMATION===
 @-webkit-keyframes rotateBorder {
   from {
@@ -799,7 +825,7 @@
         -ms-flex-align: center;
         align-items: center;
         overflow: hidden;
-        height: 125px;
+        height: 155px;
         width: 115px;
         border-top-right-radius: var(--borderR);
         border-bottom-left-radius: var(--borderR);

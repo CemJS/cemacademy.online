@@ -130,3 +130,127 @@
   backdrop-filter: blur(9.4rem);
   z-index: -1;
 }
+
+// input field
+.field {
+  width: 100%;
+  position: relative;
+  height: 3rem;
+  line-height: 3rem;
+
+  input {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    line-height: 3rem;
+    border-radius: 1rem;
+    border: 1px solid var(--green);
+    background: transparent;
+    transition: border 0.1s ease-in-out;
+    z-index: 5;
+    color: var(--white);
+    font-family: 'Montserrat';
+  }
+
+  textarea {
+    outline: none;
+    display: block;
+    width: 100%;
+    resize: none;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--green);
+    background: transparent;
+    font-size: 1rem;
+    color: var(--white);
+    font-family: 'Montserrat';
+  }
+
+  &_labelLine {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+    padding: 0.3rem;
+    margin: 0 1.5rem;
+    background: var(--back_modal);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    height: 3rem;
+    transition: 0.2s ease;
+  }
+
+  input:focus+.field_labelLine {
+    height: 2rem;
+    line-height: 2rem;
+    transform: translate(-1rem, -1rem) scale(0.88);
+    z-index: 5;
+  }
+
+  &-status {
+    color: var(--white);
+    transition: color 0.3s ease-in-out;
+    position: absolute;
+    top: -2.5rem;
+    right: 1rem;
+  }
+
+  // states input
+  &__valid {
+    .field_labelLine {
+      height: 2rem;
+      line-height: 2rem;
+      transform: translate(-1rem, -1rem) scale(0.88);
+      z-index: 5;
+      top: 0;
+    }
+  }
+
+  &__error {
+    input {
+      border: 1px solid var(--red);
+    }
+
+    .field-status {
+      color: var(--red);
+    }
+  }
+
+  &__success {
+    &::before {
+      content: url('svg/icons/done.svg');
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2.5rem;
+      transition: 0.3s ease-in-out;
+      transition-delay: 0.2s;
+    }
+  }
+
+  &-textarea {
+    height: auto;
+    line-height: normal;
+
+    &__limit {
+      width: 100%;
+      text-align: right;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    &__error {
+      textarea {
+        border: 1px solid var(--red);
+      }
+
+      .field-textarea__limit {
+        color: var(--red);
+      }
+    }
+  }
+}
