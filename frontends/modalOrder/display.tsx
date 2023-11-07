@@ -22,6 +22,7 @@ export const display = function () {
           </header>
           <Navigation />
           <footer class="modal_footer">
+            <p>Поля отмеченные <span class="star">*</span> обязательные к заполнению</p>
             <button
               class="btn btn__green"
               onclick={async () => {

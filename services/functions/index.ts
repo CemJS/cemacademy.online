@@ -1,3 +1,5 @@
+export * from './validator'
+export * from './validForms'
 export * from './sendApi'
 
 export const loader = function (Variable, Fn, Services, Frontends) {

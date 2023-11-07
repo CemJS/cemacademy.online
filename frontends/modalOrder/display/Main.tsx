@@ -10,9 +10,8 @@ export default function () {
                 <div class={[
                     "field",
                     this.Static.form.fullName.value.length ? "field__valid" : null,
-                    // this.Static.form.email.error ? "field__error" : null,
-                    // this.Static.form.email.valid ? "field__success" : null,
-                    // this.Static.form.email.disable ? "field__disabled" : null
+                    this.Static.form.fullName.error ? "field__error" : null,
+                    this.Static.form.fullName.valid ? "field__success" : null
                 ]}>
                     <input
                         type="text"
@@ -21,20 +20,20 @@ export default function () {
                         oninput={(e: any) => {
                             this.Static.form.fullName.value = e.target.value;
                             this.Services.functions.formFullName(this.Static.form.fullName)
-                            this.fn("checkFrom")
+                            this.fn("checkForm")
                         }} />
                     <div class="field_labelLine field_labelLine__necessarily">
                         <img src={user}></img>
                         <span>{this.Static.form.fullName.placeholder}</span>
                     </div>
-                    <p class="field__status" style="color:#E84142">{this.Static.form.fullName.error}</p>
+                    <p class="field-status" style="color:#E84142">{this.Static.form.fullName.error}</p>
                 </div>
                 <div class={[
                     "field",
                     this.Static.form.phone.value.length ? "field__valid" : null,
-                    // this.Static.form.email.error ? "field__error" : null,
-                    // this.Static.form.email.valid ? "field__success" : null,
-                    // this.Static.form.email.disable ? "field__disabled" : null
+                    this.Static.form.phone.error ? "field__error" : null,
+                    this.Static.form.phone.valid ? "field__success" : null,
+                    this.Static.form.phone.disable ? "field__disabled" : null
                 ]}>
                     <input
                         type="text"

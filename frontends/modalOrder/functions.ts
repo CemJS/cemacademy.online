@@ -14,7 +14,11 @@ export const close = function () {
 }
 
 export const checkForm = function () {
+  console.log('=f64696=', this.Static.form.fullName)
   if (this.Static.form.fullName.valid) {
-    this.init()
+    console.log('=ebcebc=', "valid fio")
+  } else {
+    console.log('=b13505=', "disvalid fio")
   }
+  this.init()
 }

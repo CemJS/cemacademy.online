@@ -10,7 +10,7 @@ export default function () {
           name: "modalWebinar",
           data: {
             title: "Записаться на бесплатный вебинар",
-            text: "Пройти бесплатный вебинар от Academy Crypto Emergency"
+            text: "Посетить бесплатный вебинар от Academy Crypto Emergency"
           }
         })}>
         <div class="presa-banner_desc">

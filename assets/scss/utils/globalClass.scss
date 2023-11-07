@@ -212,8 +212,10 @@
     color: var(--white);
     transition: color 0.3s ease-in-out;
     position: absolute;
-    top: -2.5rem;
+    top: -1.5rem;
     right: 1rem;
+    line-height: normal;
+    font-weight: 500;
   }
 
   // states input
@@ -234,6 +236,17 @@
 
     .field-status {
       color: var(--red);
+    }
+
+    &::before {
+      content: url('svg/icons/cancel.svg');
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2.5rem;
+      transition: 0.3s ease-in-out;
+      transition-delay: 0.2s;
     }
   }
 
@@ -336,7 +349,7 @@
     &-title {
       font-size: clamp(1rem, 2vw, 1.5rem);
       line-height: 125%;
-      margin-bottom: 1.2rem;
+      margin-bottom: 2rem;
     }
   }
 
