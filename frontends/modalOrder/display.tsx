@@ -47,7 +47,7 @@ export const display = function () {
                   name: "modalNotify",
                   data: {
                     icon: success,
-                    title: "Поздравляем!",
+                    title: "Спасибо!",
                     text: "Скоро с Вами свяжется наш менеджер!"
                   }
                 })

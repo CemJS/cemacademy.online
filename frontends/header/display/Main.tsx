@@ -74,7 +74,7 @@ export default function () {
           class="btn btn__green"
           onclick={() => this.Fn.initOne({
             name: "modalOrder",
-            data: { title: "Записаться на курс" }
+            data: { title: "Записывайтесь на курс" }
           })}
         >
           Записаться

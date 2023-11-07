@@ -8,7 +8,7 @@ export default function () {
       ref="question"
       onclick={() => this.Fn.initOne({
         name: "modalOrder",
-        data: { title: "Задавайте свои вопросы Academy Crypto Emergency" }
+        data: { title: "Остались вопросы? Спроси у нас!" }
       })}
     >
       <img src={question} alt="Academy Crypto Emergency" />
