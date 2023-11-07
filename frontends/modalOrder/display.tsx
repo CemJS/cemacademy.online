@@ -44,6 +44,7 @@ export const display = function () {
                 let answer = await this.Services.functions.sendApi("/api/Message", data)
                 console.log('=74d989=', answer)
                 localStorage.dateStop = Math.floor(Date.now() / 1000)
+                localStorage.sendForm = true
                 this.Fn.initOne({
                   name: "modalNotify",
                   data: {

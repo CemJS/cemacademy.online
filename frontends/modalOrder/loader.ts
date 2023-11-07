@@ -48,4 +48,8 @@ export const loader = function () {
     if (this.Variable.bonus) {
         clearTimeout(this.Variable.bonus)
     }
+
+    if (this.Variable.bonusWeb) {
+        clearTimeout(this.Variable.bonusWeb)
+    }
 }
