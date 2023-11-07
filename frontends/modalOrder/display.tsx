@@ -36,6 +36,7 @@ export const display = function () {
                   title: this.Static.title,
                   fullName: this.Static.form.fullName.value,
                   email: this.Static.form.email.value,
+                  phone: this.Static.form.phone.value,
                   telegram: this.Static.form.telegram.value,
                   comment: this.Static.form.comment.value,
                 }

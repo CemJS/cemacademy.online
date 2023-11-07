@@ -32,26 +32,26 @@ export default function () {
                 </div>
                 <div class={[
                     "field",
-                    this.Static.form.email.value.length ? "field__valid" : null,
+                    this.Static.form.phone.value.length ? "field__valid" : null,
                     // this.Static.form.email.error ? "field__error" : null,
                     // this.Static.form.email.valid ? "field__success" : null,
                     // this.Static.form.email.disable ? "field__disabled" : null
                 ]}>
                     <input
-                        type="email"
+                        type="text"
                         required
                         autocomplete="off"
                         oninput={(e: any) => {
-                            this.Static.form.email.value = e.target.value;
+                            this.Static.form.phone.value = e.target.value;
                             this.init()
                             // this.Services.functions.formEmail(this.Static.form.email)
                             // this.fn("checkFrom")
                         }} />
                     <div class="field_labelLine">
                         <img src={email}></img>
-                        <span>{this.Static.form.email.placeholder}</span>
+                        <span>{this.Static.form.phone.placeholder}</span>
                     </div>
-                    <p class="field-status">{this.Static.form.email.error}</p>
+                    <p class="field-status">{this.Static.form.phone.error}</p>
                 </div>
             </div>
             <div class="modal_form-row">
