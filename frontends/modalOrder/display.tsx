@@ -24,11 +24,23 @@ export const display = function () {
           <footer class="modal_footer">
             <button
               class="btn btn__green"
-              onclick={() => {
+              onclick={async () => {
                 this.Ref.modal.classList.remove('modal__active');
                 setTimeout(() => {
                   this.clearData();
                 }, 500)
+
+
+                console.log('=4996a9=', this.Static.form)
+                let data = {
+                  title: this.Static.title,
+                  fullName: this.Static.form.fullName.value,
+                  email: this.Static.form.email.value,
+                  telegram: this.Static.form.telegram.value,
+                  comment: this.Static.form.comment.value,
+                }
+                let answer = await this.Services.functions.sendApi("/api/Message", data)
+                console.log('=74d989=', answer)
 
                 this.Fn.initOne({
                   name: "modalNotify",

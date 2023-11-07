@@ -6,28 +6,53 @@ import telegram from '@svg/icons/telegram.svg'
 export default function () {
     return (
         <main class="modal_main modal_form">
-            <div class={[
-                "field",
-                this.Static.form.fullName.value.length ? "field__valid" : null,
-                // this.Static.form.email.error ? "field__error" : null,
-                // this.Static.form.email.valid ? "field__success" : null,
-                // this.Static.form.email.disable ? "field__disabled" : null
-            ]}>
-                <input
-                    type="text"
-                    required
-                    autocomplete="off"
-                    oninput={(e: any) => {
-                        this.Static.form.fullName.value = e.target.value;
-                        this.init()
-                        // this.Services.functions.formEmail(this.Static.form.email)
-                        // this.fn("checkFrom")
-                    }} />
-                <div class="field_labelLine">
-                    <img src={user}></img>
-                    <span>{this.Static.form.fullName.placeholder}</span>
+            <div class="modal_form-row">
+                <div class={[
+                    "field",
+                    this.Static.form.fullName.value.length ? "field__valid" : null,
+                    // this.Static.form.email.error ? "field__error" : null,
+                    // this.Static.form.email.valid ? "field__success" : null,
+                    // this.Static.form.email.disable ? "field__disabled" : null
+                ]}>
+                    <input
+                        type="text"
+                        required
+                        autocomplete="off"
+                        oninput={(e: any) => {
+                            this.Static.form.fullName.value = e.target.value;
+                            this.init()
+                            // this.Services.functions.formEmail(this.Static.form.email)
+                            // this.fn("checkFrom")
+                        }} />
+                    <div class="field_labelLine">
+                        <img src={user}></img>
+                        <span>{this.Static.form.fullName.placeholder}</span>
+                    </div>
+                    <p class="field__status" style="color:#E84142">{this.Static.form.email.error}</p>
                 </div>
-                <p class="field__status" style="color:#E84142">{this.Static.form.email.error}</p>
+                <div class={[
+                    "field",
+                    this.Static.form.email.value.length ? "field__valid" : null,
+                    // this.Static.form.email.error ? "field__error" : null,
+                    // this.Static.form.email.valid ? "field__success" : null,
+                    // this.Static.form.email.disable ? "field__disabled" : null
+                ]}>
+                    <input
+                        type="email"
+                        required
+                        autocomplete="off"
+                        oninput={(e: any) => {
+                            this.Static.form.email.value = e.target.value;
+                            this.init()
+                            // this.Services.functions.formEmail(this.Static.form.email)
+                            // this.fn("checkFrom")
+                        }} />
+                    <div class="field_labelLine">
+                        <img src={email}></img>
+                        <span>{this.Static.form.email.placeholder}</span>
+                    </div>
+                    <p class="field-status">{this.Static.form.email.error}</p>
+                </div>
             </div>
             <div class="modal_form-row">
                 <div class={[

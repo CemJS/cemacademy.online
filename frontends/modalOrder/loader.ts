@@ -18,6 +18,14 @@ export const loader = function () {
             view: false,
             disable: false
         },
+        phone: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Телефон:",
+            view: false,
+            disable: false
+        },
         telegram: {
             value: "",
             valid: false,
