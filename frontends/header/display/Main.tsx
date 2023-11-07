@@ -70,13 +70,15 @@ export default function () {
         <RenderMenu items={menu} />
       </nav>
       <div class="header_btns">
-        <a
+        <button
           class="btn btn__green"
-          href="https://t.me/cemcryptoacademy"
-          target="_blank"
+          onclick={() => this.Fn.initOne({
+            name: "modalOrder",
+            data: { title: "Записывайтесь на курс" }
+          })}
         >
           Записаться
-        </a>
+        </button>
         <div
           ref="burger"
           class={["header_burger", this.Variable.openSidebar ? "header_burger__active" : null]}

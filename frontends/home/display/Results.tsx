@@ -28,7 +28,13 @@ export default function () {
           })
         }
       </div>
-      <a href="https://t.me/cemcryptoacademy" class="btn btn__white" target="blank">Принять участие</a>
+      <a
+        class="btn btn__white"
+        onclick={() => this.Fn.initOne({
+          name: "modalOrder",
+          data: { title: "Принять участие в Academy Crypto Emergency!" }
+        })}
+      >Принять участие</a>
     </section>
   )
 }
