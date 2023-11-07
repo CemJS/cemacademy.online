@@ -104,10 +104,10 @@ export default function () {
                         rows="3"
                         oninput={(e: any) => {
                             this.Static.form.comment.value = e.target.value;
-                            this.Services.functions.formComment(this.Static.form.telegram)
+                            this.Services.functions.formComment(this.Static.form.comment)
                             this.fn("checkForm")
                         }} ></textarea>
-                    <div class="field-textarea_text">
+                    <div class="field-textarea__text">
                         <p class="field-textarea_status">{this.Static.form.comment.error}</p>
                         <p class="field-textarea__limit" ref="resultComment">{this.Static.form.comment.value.length} / {this.Static.limitComment}</p>
                     </div>

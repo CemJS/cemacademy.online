@@ -26,6 +26,10 @@ export const display = function () {
             <button
               class="btn btn__green"
               onclick={async () => {
+                if (!this.Static.form.isValid) {
+                  return
+                }
+
                 this.Ref.modal.classList.remove('modal__active');
                 setTimeout(() => {
                   this.clearData();

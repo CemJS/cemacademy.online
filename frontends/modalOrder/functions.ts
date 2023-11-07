@@ -14,11 +14,11 @@ export const close = function () {
 }
 
 export const checkForm = function () {
-  console.log('=f64696=', this.Static.form.fullName)
-  if (this.Static.form.fullName.valid) {
-    console.log('=ebcebc=', "valid fio")
+  if (this.Static.form.fullName.valid && this.Static.form.email.valid) {
+    this.Static.form.isValid = true
   } else {
-    console.log('=b13505=', "disvalid fio")
+    this.Static.form.isValid = false
   }
   this.init()
+  return
 }

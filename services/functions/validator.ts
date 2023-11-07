@@ -29,8 +29,10 @@ export const validEmail = function (email: string) {
 
 export const validComment = function (comment: string) {
   if (comment.length <= 120) {
+    console.log('=ff3414=', "< 120")
     return true
   } else {
+    console.log('=ff3414=', "> 120")
     return false
   }
 }
