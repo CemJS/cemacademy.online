@@ -40,6 +40,7 @@
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
+    margin-right: 1rem;
 
     .btn__white {
       padding: 0.5rem 1.5rem;
@@ -50,17 +51,25 @@
   }
 
   &_text {
-    font-size: 1.5rem;
+    font-size: clamp(0.8rem, 3vw, 1.5rem);
     color: var(--black);
     font-weight: 600;
 
     &__accent {
       font-weight: 700;
-      font-size: 2rem;
+      font-size: clamp(1rem, 3vw, 2rem);
       margin-left: 0.5rem;
       color: var(--red);
     }
   }
 }
 
-@keyframes saleUp {}
+@media(max-width: 585px) {
+  .sale {
+    &_content {
+      .btn__white {
+        display: none;
+      }
+    }
+  }
+}

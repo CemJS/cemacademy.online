@@ -354,13 +354,15 @@
     background: var(--back_modal);
     box-shadow: 0 0 15px -10px rgba(221, 221, 221, 0.5);
     color: var(--white);
+
   }
 
   &_header {
     &-title {
       font-size: clamp(1rem, 2vw, 1.5rem);
       line-height: 125%;
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
+      margin-right: 2rem;
     }
   }
 
@@ -368,6 +370,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
+    margin-top: 2rem;
 
     &-row {
       width: 100%;
@@ -422,6 +425,39 @@
       filter: blur(50px);
       background-image: var(--radial_gradient);
       border-radius: 50%;
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  .modal {
+    &_body {
+      padding: 5.5rem 1rem 1rem 1rem;
+    }
+
+    &_form {
+      height: 21rem;
+      overflow-y: scroll;
+      padding-right: 0.5rem;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-button {
+        background-repeat: no-repeat;
+        width: 6px;
+        height: 0px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: var(--green);
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: var(--black);
+      }
     }
   }
 }
