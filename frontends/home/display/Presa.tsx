@@ -5,7 +5,14 @@ import logoCem from '@svg/cryptoEmergency.svg'
 export default function () {
   return (
     <section class="presa section" ref="mainSection">
-      <div class="presa-banner">
+      <div class="presa-banner"
+        onclick={() => this.Fn.initOne({
+          name: "modalWebinar",
+          data: {
+            title: "Записаться на бесплатный вебинар",
+            text: "Пройти бесплатный вебинар от Academy Crypto Emergency"
+          }
+        })}>
         <div class="presa-banner_desc">
           <h1 class="title-main">
             <span>Экспертный курс о том</span>

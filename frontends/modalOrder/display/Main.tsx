@@ -20,15 +20,14 @@ export default function () {
                         autocomplete="off"
                         oninput={(e: any) => {
                             this.Static.form.fullName.value = e.target.value;
-                            this.init()
-                            // this.Services.functions.formEmail(this.Static.form.email)
-                            // this.fn("checkFrom")
+                            this.Services.functions.formFullName(this.Static.form.fullName)
+                            this.fn("checkFrom")
                         }} />
-                    <div class="field_labelLine">
+                    <div class="field_labelLine field_labelLine__necessarily">
                         <img src={user}></img>
                         <span>{this.Static.form.fullName.placeholder}</span>
                     </div>
-                    <p class="field__status" style="color:#E84142">{this.Static.form.email.error}</p>
+                    <p class="field__status" style="color:#E84142">{this.Static.form.fullName.error}</p>
                 </div>
                 <div class={[
                     "field",
@@ -57,6 +56,7 @@ export default function () {
             <div class="modal_form-row">
                 <div class={[
                     "field",
+                    "field_necessarily",
                     this.Static.form.email.value.length ? "field__valid" : null,
                     // this.Static.form.email.error ? "field__error" : null,
                     // this.Static.form.email.valid ? "field__success" : null,
@@ -72,7 +72,7 @@ export default function () {
                             // this.Services.functions.formEmail(this.Static.form.email)
                             // this.fn("checkFrom")
                         }} />
-                    <div class="field_labelLine">
+                    <div class="field_labelLine field_labelLine__necessarily">
                         <img src={email}></img>
                         <span>{this.Static.form.email.placeholder}</span>
                     </div>

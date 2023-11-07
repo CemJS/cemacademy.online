@@ -14,7 +14,7 @@ export const loader = function () {
             value: "",
             valid: false,
             error: false,
-            placeholder: "Email адрес:",
+            placeholder: "Email адрес",
             view: false,
             disable: false
         },
@@ -22,7 +22,7 @@ export const loader = function () {
             value: "",
             valid: false,
             error: false,
-            placeholder: "Телефон:",
+            placeholder: "Телефон",
             view: false,
             disable: false
         },
@@ -30,7 +30,7 @@ export const loader = function () {
             value: "",
             valid: false,
             error: false,
-            placeholder: "Telegram:",
+            placeholder: "Telegram",
             view: false,
             disable: false
         },
@@ -38,7 +38,7 @@ export const loader = function () {
             value: "",
             valid: false,
             error: false,
-            placeholder: "Комментарий:",
+            placeholder: "Комментарий",
             view: false,
             disable: false
         },

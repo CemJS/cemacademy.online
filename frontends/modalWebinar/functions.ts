@@ -12,9 +12,3 @@ export const close = function () {
     // this.Variable.$el.body.style.overflow = 'auto';
   }, 500)
 }
-
-export const checkForm = function () {
-  if (this.Static.form.fullName.valid) {
-    this.init()
-  }
-}

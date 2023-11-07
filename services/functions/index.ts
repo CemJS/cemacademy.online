@@ -6,4 +6,12 @@ export const loader = function (Variable, Fn, Services, Frontends) {
       name: "modalSale"
     })
   }, 10000)
+
+
+  // Variable.webinar = setTimeout(() => {
+  //   Fn.initOne({
+  //     name: "modalWebinar",
+  //     title: "Записаться на бесплатный вебинар"
+  //   })
+  // }, 10000)
 }
