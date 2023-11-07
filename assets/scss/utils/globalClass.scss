@@ -81,6 +81,11 @@
   font-weight: 1.5rem;
 }
 
+// padding|margin
+.mb_1 {
+  margin-bottom: 1rem;
+}
+
 // text
 .title {
   &-main {
@@ -281,10 +286,18 @@
         border: 1px solid var(--red);
       }
 
-      .field-textarea__limit {
+      .field-textarea__limit,
+      .field-textarea_status {
         color: var(--red);
       }
     }
+
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
   }
 }
 
@@ -356,7 +369,7 @@
   &_form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.8rem;
 
     &-row {
       width: 100%;
