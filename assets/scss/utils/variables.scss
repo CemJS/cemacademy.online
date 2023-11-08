@@ -7,6 +7,7 @@
   --orange: #D39768;
   --light: #EFF2F5;
   --fiolet: #8771CC;
+  --fiolet_light: #C070FF;
   --yellow: #EAD15E;
   --grey: #D9D9D9;
   --back_modal: #202432;
@@ -23,7 +24,7 @@
   --mb: 1.5vw;
   --borderR: clamp(1.5rem, 3vw, 2.8rem);
   --btnBorderR: clamp(1rem, 3vw, 1.25rem);
-  --title: clamp(1.25rem, 3.5vw, 2.8rem);
+  --title: clamp(0.6rem, 3.5vw, 2.8rem);
 }
 
 @media(max-width: 535px) {
