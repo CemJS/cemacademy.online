@@ -60,11 +60,11 @@
 
   &__white {
     background: var(--white);
-    border-radius: var(--btnBorderR);
+    border-radius: 2.5rem;
     color: var(--black);
     font-weight: 700;
     padding: 1rem 2rem;
-    border: 0.06rem solid var(--black);
+    border: 0.06rem solid var(--fiolet_light);
   }
 
   &:hover {
@@ -124,6 +124,11 @@
   font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 133%;
   font-weight: 500;
+}
+
+.orange {
+  color: #E99B67;
+  font-size: 16px !important;
 }
 
 .bold {
@@ -459,5 +464,11 @@
         background-color: var(--black);
       }
     }
+  }
+}
+
+@media(max-width: 535px) {
+  .text {
+    font-size: 14px;
   }
 }

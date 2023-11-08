@@ -1,6 +1,7 @@
 import { Cemjsx } from "cemjs-all"
 import logoWhite from '@svg/logoWhite.svg'
 import menu from 'json/menu.json'
+import socials from 'json/socials.json'
 
 const RenderMenu = function ({ items }) {
   return (
@@ -60,6 +61,24 @@ const RenderMobileMenu = function ({ items }) {
   )
 }
 
+const RenderMobileMenuSocials = function ({ items }) {
+  return (
+    <ul class="header_mobile-socials">
+      {
+        items.map(item => {
+          return (
+            <li>
+              <a class="header_mobile-socials__item" href={item.link} onclick={this.Fn.link}>
+                <img src={item.img} alt={item.name} />
+              </a>
+            </li>
+          )
+        })
+      }
+    </ul>
+  )
+}
+
 export default function () {
   return (
     <div class="header_inner">
@@ -101,6 +120,25 @@ export default function () {
         ]}
       >
         <RenderMobileMenu items={menu} />
+        <div class="header_mobile-details">
+          <button
+            class="btn btn__green"
+            onclick={() => {
+              this.Variable.openSidebar = false;
+              this.Fn.initOne({
+                name: "modalWebinar",
+                data: {
+                  title: "Записаться на бесплатный вебинар",
+                  text: "Посетить бесплатный вебинар от Academy Crypto Emergency"
+                }
+              })
+              this.Fn.initAll();
+            }}
+          >
+            Записаться на вебинар
+          </button>
+          <RenderMobileMenuSocials items={socials} />
+        </div>
       </div>
 
     </div>

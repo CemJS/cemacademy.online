@@ -6,11 +6,6 @@ export const display = function () {
     <div
       class="modal"
       ref="modal"
-      onclick={(e: any) => {
-        if (e.target === this.Ref.modalBody) {
-          this.fn("close")
-        }
-      }}
       init={this.func.show}
     >
       <div class="modal_body" ref="modalBody">

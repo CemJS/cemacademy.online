@@ -20,12 +20,19 @@ export default function () {
                 }
 
                 <div class="program_item-info">
-                  <h4 class="program_item-info__subtitle">Тема: {item.thema}</h4>
-                  <p class="text">Эксперт <span class="bold">{item.expert}</span></p>
+                  <div class="program_item-info__subtitle">
+                    <span class="orange">Тема</span>
+                    <span>{item.thema}</span>
+                  </div>
+                  <div class="program_item-info__subtitle">
+                    <span class="orange">Эксперт</span>
+                    <span>{item.expert}</span>
+                  </div>
+                  {/* <p class="text"> <span class="bold"></span></p> */}
                 </div>
 
                 <div class="program_item-result">
-                  <span class="program_item-info__subtitle">Результат</span>
+                  <span class="program_item-info__subtitle orange">Результат</span>
                   <input type="checkbox" class="program_item-result__checker" id={`resultChecker${index}`} />
                   <div class="program_item-result_limited">
                     {

@@ -6,6 +6,7 @@
   padding-top: 7.2rem;
   display: grid;
   gap: var(--gap);
+  margin-bottom: 2rem;
 
   &-banner {
     height: 100%;
@@ -123,6 +124,15 @@
       }
     }
   }
+}
+
+// ===WEBINAR===
+.webinar {
+  img {
+    width: 100%;
+  }
+
+  margin-bottom: 2rem;
 }
 
 // ===ADVANTAGES===
@@ -244,20 +254,28 @@
 
       h3 {
         font-size: var(--title);
-        font-weight: 700;
+        font-weight: 400;
         line-height: 115%;
         font-family: 'Montserrat';
       }
     }
 
     &-info {
+
+      span:nth-child(2) {
+        padding-bottom: 1rem;
+      }
+
+
       &__subtitle {
         font-size: clamp(1.125rem, 3vw, 1.3rem);
         font-weight: 600;
-        text-transform: uppercase;
         line-height: 122%;
         margin-bottom: var(--mb);
         display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
       }
     }
 
@@ -265,7 +283,7 @@
       display: flex;
       justify-content: space-between;
       gap: var(--gap);
-      padding-top: var(--padding);
+      // padding-top: var(--padding);
     }
 
     &__text {
@@ -275,13 +293,15 @@
     }
 
     &-result {
-      padding-top: var(--padding);
 
       &_limited {
         max-height: 13rem;
         overflow: hidden;
         position: relative;
         transition: max-height 0.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
         &::before {
           content: '';
@@ -352,7 +372,7 @@
   padding: 3vw 4vw;
 
   &_title {
-    font-size: clamp(1.3rem, 5vw, 4.3rem);
+    font-size: clamp(1.5rem, 5vw, 4.3rem);
     line-height: 122%;
   }
 
@@ -449,7 +469,8 @@
     }
 
     &-price {
-      margin: 0 2vw;
+      margin: 0 auto;
+      width: fit-content;
       font-size: clamp(1.1rem, 5vw, 1.5rem);
       line-height: 1;
       font-weight: 700;
@@ -532,8 +553,8 @@
 
 // ===SCROLLTOP===
 .scrollTop {
-  width: 4rem;
-  height: 4rem;
+  width: 3.1875rem;
+  height: 3.1875rem;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -546,7 +567,7 @@
   align-items: center;
   position: fixed;
   right: 1.5rem;
-  bottom: 5.5rem;
+  bottom: 9.5rem;
   z-index: 80;
   border-radius: 50%;
   opacity: 0;
@@ -570,12 +591,12 @@
 
 // ===QUESTION===
 .question {
-  width: 4rem;
-  height: 4rem;
+  width: 3.1875rem;
+  height: 3.1875rem;
   cursor: pointer;
   position: fixed;
   right: 1.5rem;
-  bottom: 10rem;
+  bottom: 5.5rem;
   z-index: 80;
   border-radius: 50%;
   opacity: 0;
@@ -749,12 +770,21 @@
   }
 
   .results {
+    position: relative;
+
+    &_title {
+      padding: 1.5rem 0 0 0;
+    }
+
     &_info {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 
       &-img {
-        display: none;
+        position: absolute;
+        width: 70px;
+        top: 1rem;
+        right: 3rem;
       }
     }
   }
@@ -781,6 +811,8 @@
 }
 
 @media(max-width: 600px) {
+
+
   .experts {
     max-width: 100%;
   }
@@ -796,6 +828,46 @@
 }
 
 @media(max-width: 535px) {
+  .presa {
+    padding-top: 5.5rem;
+
+    &-banner {
+      &_desc {
+        .text {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .program {
+    &_item {
+      &__title {
+        h3 {
+          font-size: 16px;
+        }
+      }
+
+      &-info {
+        &__subtitle {
+          gap: 0;
+        }
+      }
+
+      span {
+        font-size: 14px;
+
+        &:nth-child(2) {
+          padding-bottom: 0;
+        }
+      }
+
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+
   .experts {
     &_item {
       position: relative;
@@ -803,15 +875,17 @@
 
       &__name {
         padding-top: 1.5vw;
+        max-width: 60%;
       }
 
       &__skills {
-        max-width: 70%;
+        max-width: 60%;
         padding: 2vw 0;
       }
 
       &__desc {
         max-width: 100%;
+        padding-top: 1.3rem;
       }
 
       &__user {
@@ -844,5 +918,18 @@
       }
     }
 
+  }
+
+
+  .results {
+    &_title {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media(max-width: 464px) {
+  .presa {
+    padding-top: 4.5rem;
   }
 }
