@@ -1,4 +1,4 @@
-import { Cemjsx } from "cemjs-all"
+import { Cemjsx, Fn } from "cemjs-all"
 import logoAcademy from '@images/academy.png'
 import logoCEM from '@images/CryptoEmergency.png'
 import logoCEMmini from '@svg/cryptoEmergency.svg'
@@ -30,7 +30,7 @@ export default function () {
           {
             socials.map(item => {
               return (
-                <a href={item.link} class="footer_socials__item" onclick={this.Fn.link}>
+                <a href={item.link} class="footer_socials__item" onclick={Fn.link}>
                   <img src={item.img} alt={item.name} />
                 </a>
               )

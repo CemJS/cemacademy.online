@@ -2,7 +2,7 @@ export * from './validator'
 export * from './validForms'
 export * from './sendApi'
 
-export const loader = function (Variable, Fn, Services, Frontends) {
+export const loader = function (Variable, Fn) {
   let nowTime = Math.floor(Date.now() / 1000)
   if (localStorage.dateStop && Number(localStorage.dateStop) + (60 * 60 * 24 * 14) <= nowTime) {
     delete localStorage.dateStop

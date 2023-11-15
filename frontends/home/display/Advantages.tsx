@@ -1,4 +1,4 @@
-import { Cemjsx } from "cemjs-all"
+import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
 import advantages from 'json/advantages.json'
 
 
@@ -20,10 +20,7 @@ export default function () {
       </ul>
       <button
         class="btn btn__fiolet"
-        onclick={() => this.Fn.initOne({
-          name: "modalOrder",
-          data: { title: "Записаться на курс прямо сейчас!" }
-        })}
+        onclick={() => Fn.initOne("modalOrder", { title: "Записаться на курс прямо сейчас!" })}
       >Вступить уже сейчас!</button>
       <div class="circle"></div>
     </section>

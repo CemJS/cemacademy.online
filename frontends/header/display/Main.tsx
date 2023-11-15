@@ -1,4 +1,4 @@
-import { Cemjsx } from "cemjs-all"
+import { Cemjsx, Static, front, Fn, Func, Ref } from "cemjs-all"
 import logoWhite from '@svg/logoWhite.svg'
 import menu from 'json/menu.json'
 import socials from 'json/socials.json'
@@ -47,8 +47,8 @@ const RenderMobileMenu = function ({ items }) {
                     top: document.querySelector(item.link).offsetTop - 85,
                     behavior: "smooth"
                   })
-                  this.Variable.openSidebar = false;
-                  this.Fn.initAll();
+                  front.Variable.openSidebar = false;
+                  Fn.init()
                 }}
               >
                 {item.name}
@@ -68,7 +68,7 @@ const RenderMobileMenuSocials = function ({ items }) {
         items.map(item => {
           return (
             <li>
-              <a class="header_mobile-socials__item" href={item.link} onclick={this.Fn.link}>
+              <a class="header_mobile-socials__item" href={item.link} onclick={Fn.link}>
                 <img src={item.img} alt={item.name} />
               </a>
             </li>
@@ -91,19 +91,17 @@ export default function () {
       <div class="header_btns">
         <button
           class="btn btn__green"
-          onclick={() => this.Fn.initOne({
-            name: "modalOrder",
-            data: { title: "Записывайтесь на курс" }
-          })}
+          onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на курс" })}
         >
           Записаться
         </button>
         <div
           ref="burger"
-          class={["header_burger", this.Variable.openSidebar ? "header_burger__active" : null]}
+          class={["header_burger", front.Variable.openSidebar ? "header_burger__active" : null]}
           onclick={() => {
-            this.Variable.openSidebar = !this.Variable.openSidebar;
-            this.Fn.initAll();
+            front.Variable.openSidebar = !front.Variable.openSidebar;
+            Fn.initAll();
+
           }}
         >
           <span class="header_burger__item"></span>
@@ -116,7 +114,7 @@ export default function () {
         ref="mobileMenu"
         class={[
           "header_mobile-menu",
-          this.Variable.openSidebar ? "header_mobile-menu__active" : null
+          front.Variable.openSidebar ? "header_mobile-menu__active" : null
         ]}
       >
         <RenderMobileMenu items={menu} />
@@ -124,15 +122,12 @@ export default function () {
           <button
             class="btn btn__green"
             onclick={() => {
-              this.Variable.openSidebar = false;
-              this.Fn.initOne({
-                name: "modalWebinar",
-                data: {
-                  title: "Записаться на бесплатный вебинар",
-                  text: "Посетить бесплатный вебинар от Academy Crypto Emergency"
-                }
+              front.Variable.openSidebar = false;
+              Fn.initOne("modalWebinar", {
+                title: "Записаться на бесплатный вебинар",
+                text: "Посетить бесплатный вебинар от Academy Crypto Emergency"
               })
-              this.Fn.initAll();
+              Fn.initAll();
             }}
           >
             Записаться на вебинар
@@ -140,7 +135,6 @@ export default function () {
           <RenderMobileMenuSocials items={socials} />
         </div>
       </div>
-
     </div>
   )
 }
