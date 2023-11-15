@@ -1,4 +1,4 @@
-import { Cemjsx } from "cemjs-all"
+import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
 import logoBig from '@images/arrow.png'
 import logoCem from '@svg/cryptoEmergency.svg'
 

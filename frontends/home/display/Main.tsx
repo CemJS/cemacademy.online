@@ -1,4 +1,4 @@
-import { Cemjsx } from "cemjs-all"
+import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
 import Presa from "./Presa"
 import Advantages from "./Advantages"
 import Experts from "./Experts"

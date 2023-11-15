@@ -1,4 +1,4 @@
-import { Cemjsx } from "cemjs-all"
+import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
 import rates from 'json/rates.json'
 
 export default function () {

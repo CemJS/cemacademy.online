@@ -1,4 +1,4 @@
-import { Cemjsx } from "cemjs-all"
+import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
 import done from '@svg/done.svg'
 
 export default function () {
@@ -8,7 +8,7 @@ export default function () {
       <div class="results_info">
         <div class="results_info-text">
           {
-            this.Static.skillsResult.map(item => {
+            Static.skillsResult.map(item => {
               return (
                 <p class="text">{item}</p>
               )
@@ -21,7 +21,7 @@ export default function () {
       </div>
       <div class="results_calls">
         {
-          this.Static.callsResult.map((item) => {
+          Static.callsResult.map((item) => {
             return (
               <p class="text">{item}</p>
             )
@@ -30,10 +30,7 @@ export default function () {
       </div>
       <a
         class="btn btn__white"
-        onclick={() => this.Fn.initOne({
-          name: "modalOrder",
-          data: { title: "Принять участие в Academy Crypto Emergency!" }
-        })}
+        onclick={() => Fn.initOne("modalOrder", { title: "Принять участие в Academy Crypto Emergency!" })}
       >Принять участие</a>
     </section>
   )
