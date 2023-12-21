@@ -43,7 +43,6 @@ front.listener.finish = () => {
 
 front.func.openReviews = () => {
     const moreButton = document.querySelector('.reviews_more')
-    console.log(Static.reviews)
     if(Static.reviews.length <= 4){
         Static.reviews = reviews
         moreButton.innerHTML = 'Свернуть &lt;&lt;'
@@ -51,7 +50,6 @@ front.func.openReviews = () => {
         Static.reviews = Static.reviews.slice(0,4)
         moreButton.innerHTML = 'Ещё &gt;&gt;'
     }
-    console.log(Static.reviews)
     Fn.init()
     return
 }
