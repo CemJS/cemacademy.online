@@ -125,6 +125,13 @@ const checkFrontend = async function (dir) {
                 front.path.js = `/assets/js/${file}.js?ver=${front.version}`
                 options.entryPoints.push({ in: path.join(dir, file, "index.tsx"), out: path.resolve(options.outdir, "js", file) })
             }
+
+            if (fs.existsSync(path.join(dir, file, "style.scss"))) {
+                front.path.css = `/assets/css/${file}.css?ver=${front.version}`
+                options.entryPoints.push({ in: path.join(dir, file, "style.scss"), out: path.resolve(options.outdir, "css", file) })
+            }
+
+
             if (fs.existsSync(path.resolve(`assets/scss/${file}.scss`))) {
                 front.path.css = `/assets/css/${file}.css?ver=${front.version}`
                 options.entryPoints.push({ in: path.resolve(`assets/scss/${file}.scss`), out: path.resolve(options.outdir, "css", file) })
