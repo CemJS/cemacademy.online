@@ -91,7 +91,7 @@ export default function () {
       <div class="header_btns">
         <button
           class="btn btn__green"
-          onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на курс" })}
+          onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на вебинар" })}
         >
           Записаться
         </button>

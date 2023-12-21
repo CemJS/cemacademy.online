@@ -1,5 +1,6 @@
 import { Cemjsx, front, Func, Static, Fn, Ref } from "cemjs-all"
 import Navigation from "./navigation"
+import reviews from 'json/reviews.json'
 
 
 front.listener.finish = () => {
@@ -40,11 +41,23 @@ front.listener.finish = () => {
     return
 }
 
-front.func.test = () => {
+front.func.openReviews = () => {
+    const moreButton = document.querySelector('.reviews_more')
+    console.log(Static.reviews)
+    if(Static.reviews.length <= 4){
+        Static.reviews = reviews
+        moreButton.innerHTML = 'Свернуть &lt;&lt;'
+    }else{
+        Static.reviews = Static.reviews.slice(0,4)
+        moreButton.innerHTML = 'Ещё &gt;&gt;'
+    }
+    console.log(Static.reviews)
+    Fn.init()
     return
 }
 
 front.loader = () => {
+    Static.reviews = reviews.slice(0,4)
     Static.skillsResult = [
         "После прохождения курса вы будете разбираться и понимать что такое блокчейн, научитесь зарабатывать на смарт-контрактах и нодах, изучите NFT и токенизацию активов.",
         "Узнаете о монетизации навыков через NFT, освоите рынок криптовалют и заработок в DeFi. Разберетесь в майнинге, кибербезопасности и юридическом регулировании на рынке криптовалют.",

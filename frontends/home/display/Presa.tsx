@@ -8,9 +8,7 @@ export default function () {
       <div class="presa-banner">
         <div class="presa-banner_desc">
           <h1 class="title-main">
-            <span>Экспертный курс о том</span>
-            <span>как зарабатывают</span>
-            <span>на криптовалюте</span>
+            <span>Как сохранить и<br/>приумножить капитал<br/>на криптовалютном рынке. Крипто-Поток 2.0</span>
           </h1>
           <p class="text">Разработано опытной командой <span class="bold">Crypto Emergency</span>
             {/* <img class="presa_icon" src={logoCem} alt="Crypto Emergency" /></p> */}</p>

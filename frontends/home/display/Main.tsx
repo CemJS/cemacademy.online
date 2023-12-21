@@ -8,6 +8,7 @@ import Rates from "./Rates"
 import ScrollTop from "./ScrollTop"
 import Question from "./Question"
 import Webinar from "./Webinar"
+import Reviews from "./Reviews"
 
 export default function () {
   return (
@@ -21,6 +22,7 @@ export default function () {
       <Rates />
       <ScrollTop />
       <Question />
+      <Reviews/>
     </main>
   )
 }
