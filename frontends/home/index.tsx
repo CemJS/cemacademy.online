@@ -77,11 +77,74 @@ front.func.counterInterval = () =>{
     },1000)
 }
 
+front.func.checkForm = function () {
+    if (Static.form.fullName.valid && Static.form.email.valid) {
+        Static.form.isValid = true
+    } else {
+        Static.form.isValid = false
+    }
+    Fn.init()
+    return
+}
+
 front.loader = () => {
     Static.reviews = reviews.slice(0,4)
     Static.counterDeadline = '31/12/2023'
     Static.timer = Func.getTimeRemaining(Static.counterDeadline)
     Func.counterInterval()
+    Static.limitComment = 120;
+    //-----------------------
+    Static.form = {
+        fullName: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "ФИО",
+            view: false,
+            disable: false
+        },
+        email: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Email адрес",
+            view: false,
+            disable: false
+        },
+        phone: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Телефон",
+            view: false,
+            disable: false
+        },
+        telegram: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Telegram",
+            view: false,
+            disable: false
+        },
+        comment: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Комментарий",
+            view: false,
+            disable: false
+        },
+        isValid: false,
+    }
+
+    if (front.Variable.bonus) {
+        clearTimeout(front.Variable.bonus)
+    }
+
+    if (front.Variable.bonusWeb) {
+        clearTimeout(front.Variable.bonusWeb)
+    }
     Static.skillsResult = [
         "После прохождения курса вы будете разбираться и понимать что такое блокчейн, научитесь зарабатывать на смарт-контрактах и нодах, изучите NFT и токенизацию активов.",
         "Узнаете о монетизации навыков через NFT, освоите рынок криптовалют и заработок в DeFi. Разберетесь в майнинге, кибербезопасности и юридическом регулировании на рынке криптовалют.",
