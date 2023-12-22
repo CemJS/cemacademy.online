@@ -54,8 +54,34 @@ front.func.openReviews = () => {
     return
 }
 
+front.func.getTimeRemaining = (endtime: string) => {
+    const split = endtime.split('/')
+    const t = new Date(+split[2],+split[1] - 1,+split[0]).getTime() - new Date().getTime();
+    const seconds = Math.floor( (t/1000) % 60 );
+    const minutes = Math.floor( (t/1000/60) % 60 );
+    const hours = Math.floor( (t/(1000*60*60)) % 24 );
+    const days = Math.floor( t/(1000*60*60*24) );
+  return {
+   'total': t,
+   'days': days,
+   'hours': hours,
+   'minutes': minutes,
+   'seconds': seconds
+  };
+}
+
+front.func.counterInterval = () =>{
+    setInterval(()=>{
+        Static.timer = Func.getTimeRemaining(Static.counterDeadline)
+        Fn.init()
+    },1000)
+}
+
 front.loader = () => {
     Static.reviews = reviews.slice(0,4)
+    Static.counterDeadline = '31/12/2023'
+    Static.timer = Func.getTimeRemaining(Static.counterDeadline)
+    Func.counterInterval()
     Static.skillsResult = [
         "После прохождения курса вы будете разбираться и понимать что такое блокчейн, научитесь зарабатывать на смарт-контрактах и нодах, изучите NFT и токенизацию активов.",
         "Узнаете о монетизации навыков через NFT, освоите рынок криптовалют и заработок в DeFi. Разберетесь в майнинге, кибербезопасности и юридическом регулировании на рынке криптовалют.",

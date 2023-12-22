@@ -9,7 +9,7 @@ export default function () {
         {
           experts.map(item => {
             return (
-              <div class="experts_item" style={`background-image: url(${item.img})`}>
+              <div class="experts_item">
                 <div class="experts_item__user">
                   <img src={item.img} alt={item.name} />
                 </div>

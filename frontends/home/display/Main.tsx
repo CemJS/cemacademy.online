@@ -14,7 +14,7 @@ export default function () {
   return (
     <main class="wrapper">
       <Presa />
-      <Webinar />
+      {/* <Webinar />
       <Advantages />
       <Experts />
       <Program />
@@ -22,7 +22,7 @@ export default function () {
       <Rates />
       <ScrollTop />
       <Question />
-      <Reviews/>
+      <Reviews/> */}
     </main>
   )
 }

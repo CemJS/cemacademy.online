@@ -8,6 +8,72 @@
   gap: var(--gap);
   margin-bottom: 2rem;
 
+  &_counter{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 2.1rem 1.55rem;
+    border-radius: 35.84px;
+    background-repeat: no-repeat;
+    align-items: center;
+    z-index: 1;
+    background: linear-gradient(180deg, #79E56C 0%, #5CAC52 100%);
+    gap: 20px;
+    max-width: 402px;
+    &-bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 35.84px;
+      background-repeat: no-repeat;
+    }
+    &-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-title{
+      color: #191B21;
+      font-family: ProstoOne;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: center;
+    }
+    &-text{
+      color: rgba(0, 0, 0, 0.60);
+      font-family: ProstoOne;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 134.4%;
+    }
+    &-time{
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-size: 2.688rem;
+      font-weight: 400;
+      font-family: ProstoOne;
+      border-radius: 7px;
+      width: 75px;
+      height: 83px;
+      background: #EFF2F5;
+      box-shadow: 0px 2.867px 2.867px 0px rgba(0, 0, 0, 0.25) inset;
+      
+    }
+    &-cover{
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+
   &-banner {
     height: 100%;
     place-items: center;
@@ -177,6 +243,7 @@
   gap: var(--gap);
 
   &_item {
+    position: relative;
     background-color: var(--light);
     border-radius: var(--borderR);
     color: var(--black);
@@ -193,8 +260,12 @@
     flex-direction: column;
     gap: var(--mb);
 
-    &__user {
-      display: none;
+    &__user img{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+      object-fit: cover;
     }
 
     &__name {
@@ -213,7 +284,7 @@
       font-size: clamp(14px, 3vw, 16px);
       font-weight: 400;
       line-height: 125%;
-      max-width: 65%;
+      max-width: 60%;
     }
 
   }
@@ -768,6 +839,14 @@
 }
 
 @media(max-width: 900px) {
+  .presa{
+    &_counter{
+      &-cover{
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
+
   .experts {
     max-width: 80%;
     margin: 0 auto;
@@ -797,6 +876,7 @@
       }
     }
   }
+
   .reviews{
     &_top{
       flex-direction: column;
@@ -817,6 +897,13 @@
     &-academy {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+    }
+
+    &_counter{
+      max-width: 275px;
+      &-title{
+        font-size: 16px;
+      }
     }
   }
 
@@ -984,7 +1071,7 @@
 
       &__skills {
         max-width: 60%;
-        padding: 2vw 0;
+        padding: 2vw 0 8vw 0;
       }
 
       &__desc {
