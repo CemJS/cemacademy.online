@@ -1,6 +1,9 @@
 import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
 import logoBig from '@images/arrow.png'
 import logoCem from '@svg/cryptoEmergency.svg'
+import counterBg from '@images/counterBg.png'
+import presaHand from '@images/hand.png'
+import presaBg from '@images/payBg.png'
 
 export default function () {
   return (
@@ -8,14 +11,42 @@ export default function () {
       <div class="presa-banner">
         <div class="presa-banner_desc">
           <h1 class="title-main">
-            <span>Экспертный курс о том</span>
-            <span>как зарабатывают</span>
-            <span>на криптовалюте</span>
+            <span>Как сохранить и<br/>приумножить капитал<br/>на криптовалютном рынке. Крипто-Поток 2.0</span>
           </h1>
+          <div class="presa_counter">
+            <p class="presa_counter-title">ДО ВТОРОГО ПОТОКА ОСТАЛОСЬ</p>
+            <div class="presa_counter-cover">
+              <div class="presa_counter-wrapper">
+                <div class="presa_counter-time">{Static.timer.days}</div>
+                <p class="presa_counter-text">Дней</p>
+              </div>
+              <div class="presa_counter-wrapper">
+                <div class="presa_counter-time">{Static.timer.hours}</div>
+                <p class="presa_counter-text">Часов</p>
+              </div>
+              <div class="presa_counter-wrapper">
+                <div class="presa_counter-time">{Static.timer.minutes}</div>
+                <p class="presa_counter-text">Минут</p>
+              </div>
+              <div class="presa_counter-wrapper">
+                <div class="presa_counter-time">{Static.timer.seconds + 1}</div>
+                <p class="presa_counter-text">Секунд</p>
+              </div>
+            </div>
+            <img src={counterBg} alt="Второй поток" class="presa_counter-bg" />
+          </div>
           <p class="text">Разработано опытной командой <span class="bold">Crypto Emergency</span>
             {/* <img class="presa_icon" src={logoCem} alt="Crypto Emergency" /></p> */}</p>
         </div>
         <img class="presa-banner__image" src={logoBig} alt="Academy Crypto Emergency" />
+      </div>
+      <div class="presa-pay">
+        <p class="presa-pay__info">
+          Оплати <span class="presa-pay__discount">25%</span> и забронируй место по <span class="presa-pay__old">СТАРОЙ</span> цене!!
+          <button onclick={() => Fn.initOne("modalOrder", { title: "Оплати 25% и забронируй место по старой цене" })} class="presa-pay__button">Оплатить</button>
+        </p>
+        <img src={presaHand} alt="Скидка" class="presa-pay__img" />
+        <img src={presaBg} alt="Скидка" class="presa-pay__bg" />
       </div>
       <div class="presa-academy">
         <div class="presa-academy_item">

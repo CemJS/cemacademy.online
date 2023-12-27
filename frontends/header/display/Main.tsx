@@ -13,12 +13,14 @@ const RenderMenu = function ({ items }) {
               <a
                 href={item.link}
                 class="header_navList-item"
-                onclick={(e) => {
-                  e.preventDefault()
-                  window.scrollTo({
-                    top: document.querySelector(item.link).offsetTop - 75,
-                    behavior: "smooth"
-                  })
+                onclick={() => {
+                  Fn.linkChange("/")
+                  // e.preventDefault()
+                  // Fn.linkChange("/")
+                  // window.scrollTo({
+                  //   top: document.querySelector(item.link).offsetTop - 75,
+                  //   behavior: "smooth"
+                  // })
                 }}
               >
                 {item.name}
@@ -37,17 +39,23 @@ const RenderMobileMenu = function ({ items }) {
       {
         items.map((item) => {
           return (
-            <li>
+            <li
+            // onclick={() => {
+            //   console.log('=222c67=', front.Variable.dataUrl)
+            // }}
+            >
               <a
                 href={item.link}
                 class="header_mobile-list__item"
-                onclick={(e) => {
-                  e.preventDefault()
-                  window.scrollTo({
-                    top: document.querySelector(item.link).offsetTop - 85,
-                    behavior: "smooth"
-                  })
+                onclick={(e: any) => {
+                  Fn.linkChange("/")
+                  // e.preventDefault()
+                  // window.scrollTo({
+                  //   top: document.querySelector(item.link).offsetTop - 85,
+                  //   behavior: "smooth"
+                  // })
                   front.Variable.openSidebar = false;
+
                   Fn.init()
                 }}
               >
@@ -91,7 +99,7 @@ export default function () {
       <div class="header_btns">
         <button
           class="btn btn__green"
-          onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на курс" })}
+          onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на вебинар" })}
         >
           Записаться
         </button>

@@ -1,5 +1,6 @@
 import { Cemjsx, front, Func, Static, Fn, Ref } from "cemjs-all"
 import Navigation from "./navigation"
+import reviews from 'json/reviews.json'
 
 
 front.listener.finish = () => {
@@ -40,11 +41,110 @@ front.listener.finish = () => {
     return
 }
 
-front.func.test = () => {
+front.func.openReviews = () => {
+    const moreButton = document.querySelector('.reviews_more')
+    if(Static.reviews.length <= 4){
+        Static.reviews = reviews
+        moreButton.innerHTML = 'Свернуть &lt;&lt;'
+    }else{
+        Static.reviews = Static.reviews.slice(0,4)
+        moreButton.innerHTML = 'Ещё &gt;&gt;'
+    }
+    Fn.init()
+    return
+}
+
+front.func.getTimeRemaining = (endtime: string) => {
+    const split = endtime.split('/')
+    const t = new Date(+split[2],+split[1] - 1,+split[0]).getTime() - new Date().getTime();
+    const seconds = Math.floor( (t/1000) % 60 );
+    const minutes = Math.floor( (t/1000/60) % 60 );
+    const hours = Math.floor( (t/(1000*60*60)) % 24 );
+    const days = Math.floor( t/(1000*60*60*24) );
+  return {
+   'total': t,
+   'days': days,
+   'hours': hours,
+   'minutes': minutes,
+   'seconds': seconds
+  };
+}
+
+front.func.counterInterval = () =>{
+    setInterval(()=>{
+        Static.timer = Func.getTimeRemaining(Static.counterDeadline)
+        Fn.init()
+    },1000)
+}
+
+front.func.checkForm = function () {
+    if (Static.form.fullName.valid && Static.form.email.valid) {
+        Static.form.isValid = true
+    } else {
+        Static.form.isValid = false
+    }
+    Fn.init()
     return
 }
 
 front.loader = () => {
+    Static.reviews = reviews.slice(0,4)
+    Static.counterDeadline = '15/1/2024'
+    Static.timer = Func.getTimeRemaining(Static.counterDeadline)
+    Func.counterInterval()
+    Static.limitComment = 120;
+    //-----------------------
+    Static.form = {
+        fullName: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "ФИО",
+            view: false,
+            disable: false
+        },
+        email: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Email адрес",
+            view: false,
+            disable: false
+        },
+        phone: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Телефон",
+            view: false,
+            disable: false
+        },
+        telegram: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Telegram",
+            view: false,
+            disable: false
+        },
+        comment: {
+            value: "",
+            valid: false,
+            error: false,
+            placeholder: "Комментарий",
+            view: false,
+            disable: false
+        },
+        isValid: false,
+    }
+
+    if (front.Variable.bonus) {
+        clearTimeout(front.Variable.bonus)
+    }
+
+    if (front.Variable.bonusWeb) {
+        clearTimeout(front.Variable.bonusWeb)
+    }
     Static.skillsResult = [
         "После прохождения курса вы будете разбираться и понимать что такое блокчейн, научитесь зарабатывать на смарт-контрактах и нодах, изучите NFT и токенизацию активов.",
         "Узнаете о монетизации навыков через NFT, освоите рынок криптовалют и заработок в DeFi. Разберетесь в майнинге, кибербезопасности и юридическом регулировании на рынке криптовалют.",

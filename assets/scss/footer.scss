@@ -44,10 +44,21 @@
 
   &_down {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem 4vw;
     gap: 2rem;
+
+    &__link{
+      text-align: center;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-text{
+        font-weight: 400;
+      }
+    }
 
     &__icon {
       width: 25px;
@@ -91,6 +102,9 @@
     &_main {
       gap: 5vw;
     }
+    &_down{
+      flex-direction: column;
+    }
   }
 }
 
@@ -106,7 +120,8 @@
     }
 
     &_socials {
-      grid-column: auto;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       width: 100%;
     }
   }
