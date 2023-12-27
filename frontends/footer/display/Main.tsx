@@ -39,11 +39,32 @@ export default function () {
         </div>
       </div>
       <div class="footer_down">
-        <p class="text">
+        <a href="#" class="footer_down__link" 
+        onclick={(e: any)=>{
+          e.preventDefault()
+          Fn.linkChange('/offer')
+        }}
+        >
+          <p class="footer_down__link-text text">
+            Договор оферты
+          </p>
+        </a>
+        <a href="#" class="footer_down__link"
+        onclick={(e: any)=>{
+          e.preventDefault()
+          Fn.linkChange('/privacy')
+        }}
+        >
+          <p class="footer_down__link-text text">
+            Политика конфидициальности
+          </p>
+        </a>
+        <div class="footer_down__link">
+        <p class="footer_down__link-text text">
           Разработано командой
           <span class="bold"> Crypto Emergency</span>
         </p>
-        <img class="footer_down__icon" src={logoCEMmini} alt="Crypto Emergency" />
+        </div>
       </div>
     </div>
   )
