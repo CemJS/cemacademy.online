@@ -7,7 +7,6 @@ import Results from "./Results"
 import Rates from "./Rates"
 import ScrollTop from "./ScrollTop"
 import Question from "./Question"
-import Webinar from "./Webinar"
 import Reviews from "./Reviews"
 import OrderForm from "./OrderForm"
 
@@ -15,7 +14,6 @@ export default function () {
   return (
     <main class="wrapper">
       <Presa />
-      <Webinar />
       <Advantages />
       <Experts />
       <Program />
