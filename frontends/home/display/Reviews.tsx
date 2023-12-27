@@ -25,13 +25,13 @@ export default function () {
                         <div class="reviews_review-info">
                             <p class="reviews_review-name">{item.name}, город {item.city}</p>
                         </div>
-                        <div class="reviews_review-stars">
+                        {/* <div class="reviews_review-stars">
                             <img src={reviewsStar} alt="Звезда" class="reviews_review-star" />
                             <img src={reviewsStar} alt="Звезда" class="reviews_review-star" />
                             <img src={reviewsStar} alt="Звезда" class="reviews_review-star" />
                             <img src={reviewsStar} alt="Звезда" class="reviews_review-star" />
                             <img src={reviewsStar} alt="Звезда" class="reviews_review-star" />
-                        </div>
+                        </div> */}
                     </div>
                     <p class="reviews_review-tariff">Тариф {item.tariff}</p>
                     <p class="reviews_review-text">{item.review}</p>

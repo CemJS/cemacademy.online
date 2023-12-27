@@ -2,6 +2,8 @@ import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
 import logoBig from '@images/arrow.png'
 import logoCem from '@svg/cryptoEmergency.svg'
 import counterBg from '@images/counterBg.png'
+import presaHand from '@images/hand.png'
+import presaBg from '@images/payBg.png'
 
 export default function () {
   return (
@@ -37,6 +39,14 @@ export default function () {
             {/* <img class="presa_icon" src={logoCem} alt="Crypto Emergency" /></p> */}</p>
         </div>
         <img class="presa-banner__image" src={logoBig} alt="Academy Crypto Emergency" />
+      </div>
+      <div class="presa-pay">
+        <p class="presa-pay__info">
+          Оплати <span class="presa-pay__discount">25%</span> и забронируй место по <span class="presa-pay__old">СТАРОЙ</span> цене!!
+          <button onclick={() => Fn.initOne("modalOrder", { title: "Оплати 25% и забронируй место по старой цене" })} class="presa-pay__button">Оплатить</button>
+        </p>
+        <img src={presaHand} alt="Скидка" class="presa-pay__img" />
+        <img src={presaBg} alt="Скидка" class="presa-pay__bg" />
       </div>
       <div class="presa-academy">
         <div class="presa-academy_item">

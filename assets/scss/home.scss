@@ -74,6 +74,64 @@
     }
   }
 
+  &-pay{
+    padding: 50px 293px 40px 50px;
+    overflow: hidden;
+    border-radius: var(--borderR);
+    position: relative;
+    &__info{
+      color: var(--black);
+      font-family: ProstoOne;
+      font-size: clamp(1.5rem, 3vw, 2.75rem);
+      font-weight: 400;
+      line-height: 164%;
+    }
+    &__discount{
+      padding: 0 2px;
+      background-color: var(--white);
+      display: inline-block;
+      border-radius: 1rem;
+    }
+    &__old{
+      color: var(--white);
+    }
+    &__button{
+      float: right;
+      max-width: 100%;
+      background-color: var(--white);
+      padding: 13px 0;
+      border-radius: 2.5rem;
+      width: 22rem;
+      border: none;
+      color: var(--fiolet_black);
+      font-family: Montserrat;
+      font-size: clamp(1rem, 2vw, 1.875rem);
+      font-weight: 700;
+      line-height: 134.4%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover{
+        background-color: var(--black);
+        color: var(--white);
+      }
+    }
+    &__img{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    &__bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background-size: cover;
+    }
+  }
+
   &-banner {
     height: 100%;
     place-items: center;
@@ -104,6 +162,7 @@
     &::after {
       content: '';
       background: inherit;
+      background-size: cover;
       border-radius: inherit;
       border-radius: inherit;
       position: absolute;
@@ -117,7 +176,7 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      gap: 100px;
+      gap: 30px;
       position: relative;
       height: 100%;
       z-index: 2;
@@ -260,6 +319,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
     gap: var(--mb);
+    overflow: hidden;
 
     &__user img{
       position: absolute;
@@ -267,6 +327,7 @@
       right: 0;
       width: 200px;
       object-fit: cover;
+      float: right;
     }
 
     &__name {
@@ -278,7 +339,7 @@
     &__skills {
       font-weight: 500;
       line-height: 122%;
-      font-size: clamp(16px, 2.5vw, 24px);
+      font-size: clamp(14px, 2.5vw, 24px);
     }
 
     &__desc {
@@ -633,9 +694,9 @@
   }
   &_text{
     max-width: 652px;
-    color: #FFF;
+    color:  var(--white);
     font-family: Montserrat;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-style: normal;
     font-weight: 500;
     line-height: 134.4%;
@@ -659,7 +720,7 @@
   &_wrapper{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-row-gap: 71px;
+    grid-row-gap: 30px;
     grid-column-gap: 78px;
   }
   &_review{
@@ -684,7 +745,7 @@
       line-height: 134.4%;
     }
     &-text{
-      font-size: 1.25rem;
+      font-size: clamp(0.9rem, 1vw, 1.25rem);
       font-weight: 500;
       line-height: 134.4%; /* 26.88px */
     }
@@ -820,6 +881,11 @@
 
   .presa {
     padding-top: 6rem;
+    &-pay{
+      &__button{
+        width: 14rem;
+      }
+    }
   }
 
   .rates {
@@ -873,6 +939,17 @@
         grid-template-columns: repeat(2,1fr);
       }
     }
+    &-pay{
+      padding-right: 200px;
+      &__img{
+        right: -45px;
+      }
+      &__button{
+        margin-top: 20px;
+        margin-right: 200px;
+        float: left;
+      }
+    }
   }
 
   .experts {
@@ -918,6 +995,16 @@
 
 @media(max-width: 680px) {
   .presa {
+    &-banner{
+      &__image{
+        display: none;
+      }
+    }
+    &-pay{
+      padding-top: 30px;
+      padding-bottom: 25px;
+      padding-left: 1rem;
+    }
     &-banner {
       background-size: cover;
     }
@@ -1012,9 +1099,6 @@
   }
 
   .reviews{
-    &_text{
-      font-size: 1rem;
-    }
     &_review{
       &-name{
         font-size: 1rem;
@@ -1022,14 +1106,12 @@
       &-tariff{
         font-size: 0.9em;
       }
-      &-text{
-        font-size: 0.90rem;
-      }
     }
   }
 }
 
 @media(max-width: 600px) {
+
   .experts {
     max-width: 100%;
   }
@@ -1055,6 +1137,14 @@
 @media(max-width: 535px) {
   .presa {
     padding-top: 5.5rem;
+    
+    &-pay{
+      padding-right: 1rem;
+      &__img{
+        top: 76%;
+        width: 160px;
+      }
+    }
 
     &-banner {
       &_desc {
@@ -1113,7 +1203,7 @@
 
       &__skills {
         max-width: 60%;
-        padding: 2vw 0 8vw 0;
+        padding: 2vw 8vw 17vw 0;
       }
 
       &__desc {
@@ -1170,6 +1260,13 @@
 @media(max-width: 464px) {
   .presa {
     padding-top: 4.5rem;
+
+    &-pay{
+      &__button{
+        width: calc(100% - 110px);
+      }
+    }
+
     &_counter{
       padding: 1.1rem 0.55rem;
       gap: 12px;
