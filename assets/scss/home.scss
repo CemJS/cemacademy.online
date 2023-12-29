@@ -135,6 +135,7 @@
 
   &-banner {
     height: 100%;
+    isolation: isolate;
     place-items: center;
     position: relative;
     background: url('images/gradient.png'), linear-gradient(313deg, #212328 61.6%, #363D42 93.04%);
@@ -171,6 +172,12 @@
       inset: 0.2rem;
       height: calc(100% - 2 * 0.2rem);
       width: calc(100% - 2 * 0.2rem);
+    }
+
+    &_over{
+      width: 100%;
+      overflow: hidden;
+      border-radius: var(--borderR);
     }
 
     &_desc {
