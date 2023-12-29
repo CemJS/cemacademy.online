@@ -1,7 +1,6 @@
 import { Cemjsx, front, Func, Static, Fn, Ref } from "cemjs-all"
 import Navigation from "./navigation"
 
-
 front.listener.finish = () => {
     return
 }
@@ -27,14 +26,16 @@ front.func.checkForm = function () {
     } else {
         Static.form.isValid = false
     }
-    Fn.init()
+    // Fn.initAuto()
     return
 }
 
 front.loader = () => {
+
+
     Static.limitComment = 120;
     //-----------------------
-    Static.form = {
+    Static.formModal = {
         fullName: {
             value: "",
             valid: false,
