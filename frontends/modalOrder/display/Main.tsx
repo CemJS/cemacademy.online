@@ -19,9 +19,7 @@ export default function () {
                         required
                         autocomplete="off"
                         oninput={(e: any) => {
-                            console.log('=target=', e.target.value)
                             Static.formModal.fullName.value = e.target.value;
-                            console.log('=formModal=', Static.formModal.fullName.value)
                             front.Services.functions.formFullName(Static.formModal.fullName)
                             Func.checkForm()
                         }} />

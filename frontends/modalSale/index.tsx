@@ -8,6 +8,7 @@ front.listener.finish = () => {
 
 
 front.func.show = function ($el: HTMLElement) {
+    front.Variable.$el.body.classList.add('lock')
     setTimeout(() => {
         $el.classList.add('sale__active');
     }, 100);
@@ -15,6 +16,7 @@ front.func.show = function ($el: HTMLElement) {
 
 front.func.close = function () {
     Ref.sale.classList.remove('sale__active');
+    front.Variable.$el.body.classList.remove('lock')
     setTimeout(() => {
         Fn.clearData()
     }, 500)
