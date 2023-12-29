@@ -11,6 +11,9 @@ front.func.test = () => {
 }
 
 front.loader = () => {
+    if(front.Variable.timerInterval){
+        clearInterval(front.Variable.timerInterval)
+    }
     return
 }
 

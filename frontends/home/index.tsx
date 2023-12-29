@@ -71,7 +71,7 @@ front.func.getTimeRemaining = (endtime: string) => {
 }
 
 front.func.counterInterval = () =>{
-    setInterval(()=>{
+    front.Variable.timerInterval = setInterval(()=>{
         Static.timer = Func.getTimeRemaining(Static.counterDeadline)
         Fn.init()
     },1000)
