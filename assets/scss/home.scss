@@ -123,8 +123,9 @@
     }
     &__bg{
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -290px;
+      left: 50%;
+      transform: translateX(-50%);
       right: 0;
       bottom: 0;
       z-index: -1;
@@ -734,7 +735,7 @@
   }
   &_review{
     padding: 30px 45px 20px 34px;
-    border-radius: 45px;
+    border-radius: var(--borderR);
     background: linear-gradient(358deg, #212328 26.61%, #363D42 106.65%);
     &-top{
       display: flex;
@@ -1013,6 +1014,9 @@
       padding-top: 30px;
       padding-bottom: 25px;
       padding-left: 1rem;
+      &__button{
+        padding: 10px 0;
+      }
     }
     &-banner {
       background-size: cover;
