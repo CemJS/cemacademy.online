@@ -1000,6 +1000,16 @@
     &_text{
       max-width: none;
     }
+    &_img{
+      &::after{
+        width: 370px;
+        height: 300px;
+        bottom: -40px;
+      }
+      & img{
+        height: 200px
+      }
+    }
   }
 }
 
@@ -1269,7 +1279,15 @@
 
   .reviews{
     &_img img{
-      width: 270px;
+      width: 190px;
+    }
+    &_img{
+      &::after{
+        width: 320px;
+        height: 250px;
+        bottom: -10px;
+        left: -75px;
+      }
     }
   }
 }
