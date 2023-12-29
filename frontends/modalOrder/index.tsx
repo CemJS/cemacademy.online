@@ -9,11 +9,13 @@ front.func.show = function ($el: HTMLElement) {
     setTimeout(() => {
         $el.classList.add('modal__active');
         // this.Variable.$el.body.style.overflow = 'hidden';
+        front.Variable.$el.body.classList.add('lock')
     }, 100);
 }
 
 front.func.close = function () {
     Ref.modal.classList.remove('modal__active');
+    front.Variable.$el.body.classList.remove('lock')
     setTimeout(() => {
         Fn.clearData()
         // this.Variable.$el.body.style.overflow = 'auto';

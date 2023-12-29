@@ -54,6 +54,7 @@ const RenderMobileMenu = function ({ items }) {
                   //   top: document.querySelector(item.link).offsetTop - 85,
                   //   behavior: "smooth"
                   // })
+                  document.querySelector('body').classList.remove('lock')
                   front.Variable.openSidebar = false;
 
                   Fn.init()
@@ -107,6 +108,7 @@ export default function () {
           ref="burger"
           class={["header_burger", front.Variable.openSidebar ? "header_burger__active" : null]}
           onclick={() => {
+            front.Variable.$el.body.classList.toggle('lock')
             front.Variable.openSidebar = !front.Variable.openSidebar;
             Fn.initAll();
 

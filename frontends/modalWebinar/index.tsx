@@ -15,6 +15,7 @@ front.func.show = function ($el: HTMLElement) {
 
 front.func.close = function () {
     Ref.modal.classList.remove('modal__active');
+    front.Variable.$el.body.classList.remove('lock')
     setTimeout(() => {
         Fn.clearData()
         // this.Variable.$el.body.style.overflow = 'auto';

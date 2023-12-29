@@ -37,6 +37,10 @@ body {
     background: var(--black);
     font-family: 'Montserrat';
 
+    &.lock{
+        overflow: hidden;
+    }
+
     &::-webkit-scrollbar {
         width: 6px;
     }

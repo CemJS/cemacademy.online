@@ -8,8 +8,9 @@ front.listener.finish = () => {
 
 front.listener.clickAny = function (e) {
     if (Ref.mobileMenu && !Ref.mobileMenu.contains(e.target) && !Ref.burger.contains(e.target) && front.Variable.openSidebar) {
+        front.Variable.$el.body.classList.remove('lock')
         front.Variable.openSidebar = false;
-        Fn.initAll()
+        Fn.init()
     }
     return
 }

@@ -10,6 +10,7 @@ front.listener.finish = () => {
 front.func.show = function ($el: HTMLElement) {
     setTimeout(() => {
         $el.classList.add('notice__active');
+        front.Variable.bodyLock()
     }, 100);
 }
 
@@ -17,6 +18,7 @@ front.func.close = function () {
     Ref.notice.classList.remove('notice__active');
     setTimeout(() => {
         Fn.clearData()
+        front.Variable.$el.body.classList.remove('lock')
     }, 500)
 }
 front.loader = () => {
