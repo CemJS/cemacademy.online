@@ -23,10 +23,10 @@ front.func.close = function () {
 }
 
 front.func.checkForm = function () {
-    if (Static.form.fullName.valid && Static.form.email.valid) {
-        Static.form.isValid = true
+    if (Static.formModal.fullName.valid && Static.formModal.email.valid) {
+        Static.formModal.isValid = true
     } else {
-        Static.form.isValid = false
+        Static.formModal.isValid = false
     }
     // Fn.initAuto()
     return
