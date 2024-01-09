@@ -89,7 +89,7 @@ front.func.checkForm = function () {
 
 front.loader = () => {
     Static.reviews = reviews.slice(0, 4)
-    Static.counterDeadline = '15/1/2024'
+    Static.counterDeadline = '22/1/2024'
     Static.timer = Func.getTimeRemaining(Static.counterDeadline)
     Func.counterInterval()
     Static.limitComment = 120;
