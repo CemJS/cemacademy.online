@@ -9,7 +9,7 @@ export default function () {
         {
           experts.map(item => {
             return (
-              <div class="experts_item">
+              <div class={["experts_item", item.wide ? "wide" : null]}>
                 <div class={["experts_item__user", item.small ? "small" : null]}>
                   <img src={item.img} alt={item.name} />
                 </div>

@@ -43,11 +43,11 @@ front.listener.finish = () => {
 
 front.func.openReviews = () => {
     const moreButton = document.querySelector('.reviews_more')
-    if(Static.reviews.length <= 4){
+    if (Static.reviews.length <= 4) {
         Static.reviews = reviews
         moreButton.innerHTML = 'Свернуть &lt;&lt;'
-    }else{
-        Static.reviews = Static.reviews.slice(0,4)
+    } else {
+        Static.reviews = Static.reviews.slice(0, 4)
         moreButton.innerHTML = 'Ещё &gt;&gt;'
     }
     Fn.init()
@@ -56,25 +56,25 @@ front.func.openReviews = () => {
 
 front.func.getTimeRemaining = (endtime: string) => {
     const split = endtime.split('/')
-    const t = new Date(+split[2],+split[1] - 1,+split[0]).getTime() - new Date().getTime();
-    const seconds = Math.floor( (t/1000) % 60 );
-    const minutes = Math.floor( (t/1000/60) % 60 );
-    const hours = Math.floor( (t/(1000*60*60)) % 24 );
-    const days = Math.floor( t/(1000*60*60*24) );
-  return {
-   'total': t,
-   'days': days,
-   'hours': hours,
-   'minutes': minutes,
-   'seconds': seconds
-  };
+    const t = new Date(+split[2], +split[1] - 1, +split[0]).getTime() - new Date().getTime();
+    const seconds = Math.floor((t / 1000) % 60);
+    const minutes = Math.floor((t / 1000 / 60) % 60);
+    const hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
 }
 
-front.func.counterInterval = () =>{
-    front.Variable.timerInterval = setInterval(()=>{
+front.func.counterInterval = () => {
+    front.Variable.timerInterval = setInterval(() => {
         Static.timer = Func.getTimeRemaining(Static.counterDeadline)
         Fn.init()
-    },1000)
+    }, 1000)
 }
 
 front.func.checkForm = function () {
@@ -88,7 +88,7 @@ front.func.checkForm = function () {
 }
 
 front.loader = () => {
-    Static.reviews = reviews.slice(0,4)
+    Static.reviews = reviews.slice(0, 4)
     Static.counterDeadline = '15/1/2024'
     Static.timer = Func.getTimeRemaining(Static.counterDeadline)
     Func.counterInterval()
@@ -148,7 +148,7 @@ front.loader = () => {
     Static.skillsResult = [
         "После прохождения курса вы будете разбираться и понимать что такое блокчейн, научитесь зарабатывать на смарт-контрактах и нодах, изучите NFT и токенизацию активов.",
         "Узнаете о монетизации навыков через NFT, освоите рынок криптовалют и заработок в DeFi. Разберетесь в майнинге, кибербезопасности и юридическом регулировании на рынке криптовалют.",
-        "Научитесь создавать и реализовывать криптовалютные проектоы, управлять проектами в сфере криптовалют, а также изучите фундаментальный анализ криптоактивов и сформируете инвестиционный портфель.",
+        "Научитесь создавать и реализовывать криптовалютные проекты, управлять проектами в сфере криптовалют, а также изучите фундаментальный анализ криптоактивов и сформируете инвестиционный портфель.",
         "Вы узнаете о практической работе с нейросетями ChatGPT и CEM Assistant для вашего бизнеса и жизни."
     ]
     Static.callsResult = [
