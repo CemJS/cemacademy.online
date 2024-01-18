@@ -1,18 +1,28 @@
-import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
-import logoBig from '@images/arrow.png'
-import logoCem from '@svg/cryptoEmergency.svg'
-import counterBg from '@images/counterBg.png'
-import presaHand from '@images/hand.png'
-import presaBg from '@images/payBg.png'
+import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all";
+import logoBig from "@images/arrow.png";
+import logoCem from "@svg/cryptoEmergency.svg";
+import counterBg from "@images/counterBg.png";
+import presaHand from "@images/hand.png";
+import presaBg from "@images/payBg.png";
 
 export default function () {
   return (
-    <section class="presa section" ref="mainSection">
+    <section
+      class="presa section"
+      ref="mainSection"
+    >
       <div class="presa-banner_over">
         <div class="presa-banner">
           <div class="presa-banner_desc">
             <h1 class="title-main">
-              <span>Как сохранить и<br/>приумножить капитал<br/>на криптовалютном рынке. Крипто-Поток 2.0</span>
+              <span>
+                Как сохранить и<br />
+                приумножить капитал
+                <br />
+                на криптовалютном рынке.
+                <br />
+                Крипто-Поток 2.0
+              </span>
             </h1>
             <div class="presa_counter">
               <p class="presa_counter-title">ДО ВТОРОГО ПОТОКА ОСТАЛОСЬ</p>
@@ -34,37 +44,61 @@ export default function () {
                   <p class="presa_counter-text">Секунд</p>
                 </div>
               </div>
-              <img src={counterBg} alt="Второй поток" class="presa_counter-bg" />
+              <img
+                src={counterBg}
+                alt="Второй поток"
+                class="presa_counter-bg"
+              />
             </div>
-            <p class="text">Разработано опытной командой <span class="bold">Crypto Emergency</span>
-              {/* <img class="presa_icon" src={logoCem} alt="Crypto Emergency" /></p> */}</p>
+            <p class="text">
+              Разработано опытной командой <span class="bold">Crypto Emergency</span>
+              {/* <img class="presa_icon" src={logoCem} alt="Crypto Emergency" /></p> */}
+            </p>
           </div>
-          <img class="presa-banner__image" src={logoBig} alt="Academy Crypto Emergency" />
+          <img
+            class="presa-banner__image"
+            src={logoBig}
+            alt="Academy Crypto Emergency"
+          />
         </div>
       </div>
       <div class="presa-pay">
         <p class="presa-pay__info">
           Оплати <span class="presa-pay__discount">25%</span> и забронируй место по <span class="presa-pay__old">СТАРОЙ</span> цене!!
-          <button onclick={() => Fn.initOne("modalOrder", { title: "Оплати 25% и забронируй место по старой цене" })} class="presa-pay__button">Оплатить</button>
+          <button
+            onclick={() => Fn.initOne("modalOrder", { title: "Оплати 25% и забронируй место по старой цене" })}
+            class="presa-pay__button"
+          >
+            Оплатить
+          </button>
         </p>
-        <img src={presaHand} alt="Скидка" class="presa-pay__img" />
-        <img src={presaBg} alt="Скидка" class="presa-pay__bg" />
+        <img
+          src={presaHand}
+          alt="Скидка"
+          class="presa-pay__img"
+        />
+        <img
+          src={presaBg}
+          alt="Скидка"
+          class="presa-pay__bg"
+        />
       </div>
       <div class="presa-academy">
         <div class="presa-academy_item">
           <h3 class="presa-academy_item-title">Академия Crypto Emergency</h3>
-          <p class="text">Образовательное учреждение, созданное компанией Crypto Emergency, ведущим игроком в сфере криптовалют и блокчейн технологий. Наша академия предлагает широкий спектр обучающих программ и курсов, разработанных опытными специалистами в области криптовалют и блокчейн.</p>
+          <p class="text">
+            Образовательное учреждение, созданное компанией Crypto Emergency, ведущим игроком в сфере криптовалют и блокчейн технологий. Наша академия предлагает широкий спектр обучающих программ и
+            курсов, разработанных опытными специалистами в области криптовалют и блокчейн.
+          </p>
         </div>
         <div class="presa-academy_item">
           <h3 class="presa-academy_item-title">Почему стоит выбрать академию Crypto Emergency? </h3>
-          <p class="text">Мы предлагаем качественное образование, основанное
-            на опыте и экспертизе в сфере криптовалют
-            и блокчейн. Наша академия поможет вам получить необходимые знания и навыки для успешной карьеры
-            в этой быстро развивающейся области. Присоединяйтесь
-            к нам и начните свой путь к успеху в мире криптовалют
-            и блокчейн технологий!</p>
+          <p class="text">
+            Мы предлагаем качественное образование, основанное на опыте и экспертизе в сфере криптовалют и блокчейн. Наша академия поможет вам получить необходимые знания и навыки для успешной карьеры
+            в этой быстро развивающейся области. Присоединяйтесь к нам и начните свой путь к успеху в мире криптовалют и блокчейн технологий!
+          </p>
         </div>
       </div>
     </section>
-  )
+  );
 }
