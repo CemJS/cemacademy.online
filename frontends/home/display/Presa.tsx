@@ -24,32 +24,41 @@ export default function () {
                 Крипто-Поток 2.0
               </span>
             </h1>
-            <div class="presa_counter">
-              <p class="presa_counter-title">ДО ВТОРОГО ПОТОКА ОСТАЛОСЬ</p>
-              <div class="presa_counter-cover">
-                <div class="presa_counter-wrapper">
-                  <div class="presa_counter-time">{Static.timer.days}</div>
-                  <p class="presa_counter-text">Дней</p>
+            {Static.timer.total < 0 ? (
+              <button
+                class="btn btn__green"
+                onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на вебинар" })}
+              >
+                Записаться
+              </button>
+            ) : (
+              <div class="presa_counter">
+                <p class="presa_counter-title">ДО ВТОРОГО ПОТОКА ОСТАЛОСЬ</p>
+                <div class="presa_counter-cover">
+                  <div class="presa_counter-wrapper">
+                    <div class="presa_counter-time">{Static.timer.days}</div>
+                    <p class="presa_counter-text">Дней</p>
+                  </div>
+                  <div class="presa_counter-wrapper">
+                    <div class="presa_counter-time">{Static.timer.hours}</div>
+                    <p class="presa_counter-text">Часов</p>
+                  </div>
+                  <div class="presa_counter-wrapper">
+                    <div class="presa_counter-time">{Static.timer.minutes}</div>
+                    <p class="presa_counter-text">Минут</p>
+                  </div>
+                  <div class="presa_counter-wrapper">
+                    <div class="presa_counter-time">{Static.timer.seconds + 1}</div>
+                    <p class="presa_counter-text">Секунд</p>
+                  </div>
                 </div>
-                <div class="presa_counter-wrapper">
-                  <div class="presa_counter-time">{Static.timer.hours}</div>
-                  <p class="presa_counter-text">Часов</p>
-                </div>
-                <div class="presa_counter-wrapper">
-                  <div class="presa_counter-time">{Static.timer.minutes}</div>
-                  <p class="presa_counter-text">Минут</p>
-                </div>
-                <div class="presa_counter-wrapper">
-                  <div class="presa_counter-time">{Static.timer.seconds + 1}</div>
-                  <p class="presa_counter-text">Секунд</p>
-                </div>
+                <img
+                  src={counterBg}
+                  alt="Второй поток"
+                  class="presa_counter-bg"
+                />
               </div>
-              <img
-                src={counterBg}
-                alt="Второй поток"
-                class="presa_counter-bg"
-              />
-            </div>
+            )}
             <p class="text">
               Разработано опытной командой <span class="bold">Crypto Emergency</span>
               {/* <img class="presa_icon" src={logoCem} alt="Crypto Emergency" /></p> */}
