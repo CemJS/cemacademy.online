@@ -24,7 +24,7 @@ export default function () {
                 Крипто-Поток 2.0
               </span>
             </h1>
-            {Static.timer.total > 0 ? (
+            {Static.timer.total < 0 ? (
               <button
                 class="btn btn__green"
                 onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на вебинар" })}
