@@ -27,7 +27,6 @@ export default function () {
                         comment: Static.form.comment.value,
                     }
                     let answer = await front.Services.functions.sendApi("/api/Message", data)
-                    console.log('=74d989=', answer)
 
                     if (answer.error) {
                         Fn.initOne("modalNotify", {
