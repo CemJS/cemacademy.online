@@ -1,4 +1,4 @@
-import { Cemjsx, Static, Ref, Fn, front } from "cemjs-all"
+import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
 import success from '@svg/icons/success.svg'
 
 
@@ -35,6 +35,7 @@ export default function () {
                             title: "Error!",
                             text: answer.error
                         })
+                        Func.close()
                         return
                     }
 

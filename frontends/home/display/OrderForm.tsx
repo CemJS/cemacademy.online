@@ -7,10 +7,10 @@ import success from '@svg/icons/success.svg'
 
 
 export default function () {
-  return (
-    <section class="section order" id="order">
-        <h2 class="order_title title-section">Записывайтесь на вебинар</h2>
-        <div class="order_form-row">
+    return (
+        <section class="section order" id="order">
+            <h2 class="order_title title-section">Записывайтесь на вебинар</h2>
+            <div class="order_form-row">
                 <div class={[
                     "field",
                     Static.form.fullName.value.length ? "field__valid" : null,
@@ -53,8 +53,8 @@ export default function () {
                     </div>
                     <p class="field-status">{Static.form.phone.error}</p>
                 </div>
-        </div>
-        <div class="order_form-row">
+            </div>
+            <div class="order_form-row">
                 <div class={[
                     "field",
                     "field_necessarily",
@@ -95,8 +95,8 @@ export default function () {
                         <span>{Static.form.telegram.placeholder}</span>
                     </div>
                 </div>
-        </div>
-        <div class="order_comments">
+            </div>
+            <div class="order_comments">
                 <h3 class="mb_1">{Static.form.comment.placeholder}</h3>
                 <div class={[
                     "field field-textarea",
@@ -116,38 +116,47 @@ export default function () {
                     </div>
 
                 </div>
-        </div>
-        <div class="order_footer">
-        <p>Поля отмеченные <span class="star">*</span> обязательные к заполнению</p>
-        <button
-                class="btn btn__green"
-                onclick={async () => {
-                    if (!Static.form.isValid) {
-                        return
-                    }
+            </div>
+            <div class="order_footer">
+                <p>Поля отмеченные <span class="star">*</span> обязательные к заполнению</p>
+                <button
+                    class="btn btn__green"
+                    onclick={async () => {
+                        if (!Static.form.isValid) {
+                            return
+                        }
 
-                    let data = {
-                        title: Static.title,
-                        fullName: Static.form.fullName.value,
-                        email: Static.form.email.value,
-                        phone: Static.form.phone.value,
-                        telegram: Static.form.telegram.value,
-                        comment: Static.form.comment.value,
-                    }
-                    let answer = await front.Services.functions.sendApi("/api/Message", data)
-                    console.log('=74d989=', answer)
-                    localStorage.dateStop = Math.floor(Date.now() / 1000)
-                    localStorage.sendForm = true
-                    console.log('=27395b=',123)
-                    Fn.initOne("modalNotify", {
-                        icon: success,
-                        title: "Спасибо!",
-                        text: "Скоро с Вами свяжется наш менеджер!"
-                    })
-                }}>
-                Отправить
-        </button>
-        </div>
-    </section>
-  )
+                        let data = {
+                            title: Static.title,
+                            fullName: Static.form.fullName.value,
+                            email: Static.form.email.value,
+                            phone: Static.form.phone.value,
+                            telegram: Static.form.telegram.value,
+                            comment: Static.form.comment.value,
+                        }
+                        let answer = await front.Services.functions.sendApi("/api/Message", data)
+
+                        if (answer.error) {
+                            Fn.initOne("modalNotify", {
+                                icon: success,
+                                title: "Error!",
+                                text: answer.error
+                            })
+                            Func.close()
+                            return
+                        }
+
+                        localStorage.dateStop = Math.floor(Date.now() / 1000)
+                        localStorage.sendForm = true
+                        Fn.initOne("modalNotify", {
+                            icon: success,
+                            title: "Спасибо!",
+                            text: "Скоро с Вами свяжется наш менеджер!"
+                        })
+                    }}>
+                    Отправить
+                </button>
+            </div>
+        </section>
+    )
 }
