@@ -23,10 +23,10 @@ front.func.close = function () {
 }
 
 front.func.checkForm = function () {
-    if (Static.formModal.fullName.valid && Static.formModal.email.valid) {
-        Static.formModal.isValid = true
+    if (Static.form.fullName.valid && Static.form.email.valid) {
+        Static.form.isValid = true
     } else {
-        Static.formModal.isValid = false
+        Static.form.isValid = false
     }
     // Fn.initAuto()
     return
@@ -37,7 +37,7 @@ front.loader = () => {
 
     Static.limitComment = 120;
     //-----------------------
-    Static.formModal = {
+    Static.form = {
         fullName: {
             value: "",
             valid: false,
