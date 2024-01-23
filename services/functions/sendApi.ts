@@ -7,7 +7,6 @@ export const sendApi = async function (url: string, data: any) {
     })
 
     let json = await answer.json()
-    console.log('=ecd409=', json)
     return json
 
   } catch (error) {

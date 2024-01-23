@@ -10,7 +10,7 @@ front.listener.finish = () => {
 front.func.show = function ($el: HTMLElement) {
     setTimeout(() => {
         $el.classList.add('notice__active');
-        front.Variable.bodyLock()
+        // front.Variable.bodyLock()
     }, 100);
 }
 

@@ -18,6 +18,7 @@ export default function () {
                     Static.form.fullName.valid ? "field__success" : null
                 ]}>
                     <input
+                        ref="fio"
                         type="text"
                         required
                         autocomplete="off"
@@ -40,6 +41,7 @@ export default function () {
                 ]}>
                     <input
                         type="text"
+                        ref="phone"
                         required
                         autocomplete="off"
                         oninput={(e: any) => {
@@ -64,6 +66,7 @@ export default function () {
                 ]}>
                     <input
                         type="email"
+                        ref="email"
                         required
                         autocomplete="off"
                         oninput={(e: any) => {
@@ -83,6 +86,7 @@ export default function () {
                 ]}>
                     <input
                         type="text"
+                        ref="nickTelegram"
                         required
                         autocomplete="off"
                         oninput={(e: any) => {
@@ -142,9 +146,14 @@ export default function () {
                                 title: "Error!",
                                 text: answer.error
                             })
-                            Func.close()
                             return
                         }
+
+                        Ref.modalComment.value = ""
+                        Ref.fio.value = ""
+                        Ref.phone.value = ""
+                        Ref.email.value = ""
+                        Ref.nickTelegram.value = ""
 
                         localStorage.dateStop = Math.floor(Date.now() / 1000)
                         localStorage.sendForm = true
