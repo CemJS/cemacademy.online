@@ -28,6 +28,16 @@ export default function () {
                     }
                     let answer = await front.Services.functions.sendApi("/api/Message", data)
                     console.log('=74d989=', answer)
+
+                    if (answer.error) {
+                        Fn.initOne("modalNotify", {
+                            icon: success,
+                            title: "Error!",
+                            text: answer.error
+                        })
+                        return
+                    }
+
                     localStorage.dateStop = Math.floor(Date.now() / 1000)
                     localStorage.sendForm = true
                     Fn.initOne("modalNotify", {
