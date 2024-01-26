@@ -131,14 +131,18 @@ export default function () {
                         }
 
                         let data = {
-                            title: Static.title,
-                            fullName: Static.form.fullName.value,
-                            email: Static.form.email.value,
-                            phone: Static.form.phone.value,
-                            telegram: Static.form.telegram.value,
-                            comment: Static.form.comment.value,
+                            action: "contactForm",
+                            formName: "Записывайтесь на вебинар",
+                            contactForm: {
+                                fullName: Static.form.fullName.value,
+                                email: Static.form.email.value,
+                                phone: Static.form.phone.value,
+                                telegram: Static.form.telegram.value,
+                                comment: Static.form.comment.value,
+                            }
                         }
-                        let answer = await front.Services.functions.sendApi("/api/Message", data)
+                        let answer = await front.Services.functions.sendApi("/api/tg/cem-academy", data)
+
 
                         if (answer.error) {
                             Fn.initOne("modalNotify", {
