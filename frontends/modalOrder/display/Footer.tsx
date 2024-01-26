@@ -18,20 +18,31 @@ export default function () {
                         Fn.clearData();
                     }, 500)
 
-                    let data = {
-                        action: "contactForm",
-                        formName: Static.title,
-                        contactForm: {
-                            fullName: Static.form.fullName.value,
-                            email: Static.form.email.value,
-                            phone: Static.form.phone.value,
-                            telegram: Static.form.telegram.value,
-                            comment: Static.form.comment.value,
-                        }
-                    }
-                    let answer = await front.Services.functions.sendApi("/api/tg/cem-academy", data)
+                    // let data = {
+                    //     action: "contactForm",
+                    //     formName: Static.title,
+                    //     contactForm: {
+                    //         fullName: Static.form.fullName.value,
+                    //         email: Static.form.email.value,
+                    //         phone: Static.form.phone.value,
+                    //         telegram: Static.form.telegram.value,
+                    //         comment: Static.form.comment.value,
+                    //     }
+                    // }
+                    // let answer = await front.Services.functions.sendApi("/api/tg/cem-academy", data)
 
-                    console.log('=89d39b=', answer)
+                    let data = {
+                        title: "Записывайтесь на вебинар",
+                        fullName: Static.form.fullName.value,
+                        email: Static.form.email.value,
+                        phone: Static.form.phone.value,
+                        telegram: Static.form.telegram.value,
+                        comment: Static.form.comment.value,
+                    }
+
+                    let answer = await front.Services.functions.sendApi("/api/Message", data)
+
+                    // console.log('=89d39b=', answer)
 
                     if (answer.error) {
                         Fn.initOne("modalNotify", {
