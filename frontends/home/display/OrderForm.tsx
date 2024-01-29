@@ -136,9 +136,9 @@ export default function () {
                             contactForm: {
                                 fullName: Static.form.fullName.value,
                                 email: Static.form.email.value,
-                                phone: Static.form.phone.value,
-                                telegram: Static.form.telegram.value,
-                                comment: Static.form.comment.value,
+                                phone: Static.form.phone.value ? Static.form.phone.value : "",
+                                telegram: Static.form.telegram.value ? Static.form.telegram.value : "",
+                                comment: Static.form.comment.value ? Static.form.comment.value : "",
                             }
                         }
 
