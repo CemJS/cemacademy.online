@@ -3,6 +3,7 @@ import Navigation from "./navigation"
 
 
 front.listener.finish = () => {
+    setTimeout(() => { Func.close() }, 2000)
     return
 }
 

@@ -142,19 +142,7 @@ export default function () {
                             }
                         }
 
-                        // let data = {
-                        //     title: "Записывайтесь на вебинар",
-                        //     fullName: Static.form.fullName.value,
-                        //     email: Static.form.email.value,
-                        //     phone: Static.form.phone.value,
-                        //     telegram: Static.form.telegram.value,
-                        //     comment: Static.form.comment.value,
-                        // }
-
-
                         let answer = await front.Services.functions.sendApi("/api/tg/cem-academy", data)
-
-                        // let answer = await front.Services.functions.sendApi("/api/Message", data)
 
                         if (answer.error) {
                             Fn.initOne("modalNotify", {
@@ -170,6 +158,11 @@ export default function () {
                         Ref.phone.value = ""
                         Ref.email.value = ""
                         Ref.nickTelegram.value = ""
+                        Static.form.fullName.value = ""
+                        Static.form.phone.value = ""
+                        Static.form.email.value = ""
+                        Static.form.telegram.value = ""
+                        Static.form.comment.value = ""
 
                         localStorage.dateStop = Math.floor(Date.now() / 1000)
                         localStorage.sendForm = true
