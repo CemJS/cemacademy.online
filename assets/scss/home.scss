@@ -8,7 +8,7 @@
   gap: var(--gap);
   margin-bottom: 2rem;
 
-  &_counter{
+  &_counter {
     position: relative;
     display: inline-flex;
     flex-direction: column;
@@ -20,7 +20,8 @@
     background: linear-gradient(180deg, #79E56C 0%, #5CAC52 100%);
     gap: 20px;
     max-width: 402px;
-    &-bg{
+
+    &-bg {
       position: absolute;
       top: 0;
       left: 0;
@@ -30,26 +31,30 @@
       border-radius: 35.84px;
       background-repeat: no-repeat;
     }
-    &-wrapper{
+
+    &-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    &-title{
+
+    &-title {
       color: var(--black);
       font-family: ProstoOne;
       font-size: 18px;
       font-weight: 400;
       text-align: center;
     }
-    &-text{
+
+    &-text {
       color: rgba(0, 0, 0, 0.60);
       font-family: ProstoOne;
       font-size: 14px;
       font-weight: 400;
       line-height: 134.4%;
     }
-    &-time{
+
+    &-time {
       margin-bottom: 4px;
       display: flex;
       align-items: center;
@@ -63,39 +68,44 @@
       height: 83px;
       background: #EFF2F5;
       box-shadow: 0px 2.867px 2.867px 0px rgba(0, 0, 0, 0.25) inset;
-      
+
     }
-    &-cover{
+
+    &-cover {
       display: inline-flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 15px;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
-  &-pay{
+  &-pay {
     padding: 50px 293px 40px 50px;
     overflow: hidden;
     border-radius: var(--borderR);
     position: relative;
-    &__info{
+
+    &__info {
       color: var(--black);
       font-family: ProstoOne;
       font-size: clamp(1.5rem, 3vw, 2.75rem);
       font-weight: 400;
       line-height: 164%;
     }
-    &__discount{
+
+    &__discount {
       padding: 0 2px;
       background-color: var(--white);
       display: inline-block;
       border-radius: 1rem;
     }
-    &__old{
+
+    &__old {
       color: var(--white);
     }
-    &__button{
+
+    &__button {
       float: right;
       max-width: 100%;
       background-color: var(--white);
@@ -110,18 +120,21 @@
       line-height: 134.4%;
       cursor: pointer;
       transition: all 0.3s ease;
-      &:hover{
+
+      &:hover {
         background-color: var(--black);
         color: var(--white);
       }
     }
-    &__img{
+
+    &__img {
       position: absolute;
       top: 50%;
       right: 0;
       transform: translateY(-50%);
     }
-    &__bg{
+
+    &__bg {
       position: absolute;
       top: -290px;
       left: 50%;
@@ -174,7 +187,7 @@
       width: calc(100% - 2 * 0.2rem);
     }
 
-    &_over{
+    &_over {
       width: 100%;
       overflow: hidden;
       border-radius: var(--borderR);
@@ -329,18 +342,20 @@
     gap: var(--mb);
     overflow: hidden;
 
-    &.wide{
+    &.wide {
       grid-column: span 2;
-      & .experts_item__desc{
+
+      & .experts_item__desc {
         max-width: 77%;
       }
     }
 
-    &__user{
-      &.small img{
+    &__user {
+      &.small img {
         height: 280px;
       }
-      & img{
+
+      & img {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -350,7 +365,7 @@
       }
     }
 
-    &__wrapper{
+    &__wrapper {
       min-height: 110px;
     }
 
@@ -529,7 +544,8 @@
   padding: 3vw 4vw;
 
   &_title {
-    font-size: clamp(1.5rem, 5vw, 4.3rem);
+    // font-size: clamp(1.5rem, 5vw, 4.3rem);
+    font-size: clamp(1rem, 3vw, 2.3rem);
     line-height: 122%;
   }
 
@@ -709,26 +725,29 @@
 }
 
 // ===REVIEWS===
-.reviews{
-  &_top{
+.reviews {
+  &_top {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 77px;
   }
-  &_text{
+
+  &_text {
     max-width: 652px;
-    color:  var(--white);
+    color: var(--white);
     font-family: Montserrat;
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-style: normal;
     font-weight: 500;
     line-height: 134.4%;
   }
-  &_img{
+
+  &_img {
     margin: 0 auto;
     position: relative;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       left: -55px;
@@ -742,40 +761,48 @@
       z-index: -1;
     }
   }
-  &_wrapper{
+
+  &_wrapper {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 30px;
     grid-column-gap: 78px;
   }
-  &_review{
+
+  &_review {
     padding: 30px 45px 20px 34px;
     border-radius: var(--borderR);
     background: linear-gradient(358deg, #212328 26.61%, #363D42 106.65%);
-    &-top{
+
+    &-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    &-name{
+
+    &-name {
       color: #9FF199;
       font-size: 1.5rem;
       font-weight: 600;
       line-height: 134.4%;
     }
-    &-tariff{
+
+    &-tariff {
       margin-bottom: 22px;
       font-size: 1.25rem;
       font-weight: 500;
       line-height: 134.4%;
     }
-    &-text{
+
+    &-text {
       font-size: clamp(0.9rem, 1vw, 1.25rem);
       font-weight: 500;
-      line-height: 134.4%; /* 26.88px */
+      line-height: 134.4%;
+      /* 26.88px */
     }
   }
-  &_more{
+
+  &_more {
     margin: 0 auto;
     margin-top: 20px;
   }
@@ -846,28 +873,32 @@
 }
 
 // ===ORDER===
-.order{
-  &_form{
-    &-row{
+.order {
+  &_form {
+    &-row {
       display: grid;
       gap: 35px;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
       margin-bottom: 35px;
-      & .field .field_labelLine{
+
+      & .field .field_labelLine {
         background: var(--black);
       }
     }
   }
-  &_footer{
+
+  &_footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    & p{
+
+    & p {
       text-align: center;
     }
   }
-  &_comments{
+
+  &_comments {
     margin-bottom: 5px;
   }
 }
@@ -906,8 +937,9 @@
 
   .presa {
     padding-top: 6rem;
-    &-pay{
-      &__button{
+
+    &-pay {
+      &__button {
         width: 14rem;
       }
     }
@@ -950,26 +982,29 @@
     }
   }
 
-  .reviews{
-    &_wrapper{
-      grid-template-columns: repeat(1,1fr);
+  .reviews {
+    &_wrapper {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
 
 @media(max-width: 900px) {
-  .presa{
-    &_counter{
-      &-cover{
-        grid-template-columns: repeat(2,1fr);
+  .presa {
+    &_counter {
+      &-cover {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
-    &-pay{
+
+    &-pay {
       padding-right: 200px;
-      &__img{
+
+      &__img {
         right: -45px;
       }
-      &__button{
+
+      &__button {
         margin-top: 20px;
         margin-right: 200px;
         float: left;
@@ -985,10 +1020,10 @@
     &_item {
       background-size: 187px;
 
-      &.wide{
+      &.wide {
         grid-column: 1;
 
-        & .experts_item__desc{
+        & .experts_item__desc {
           max-width: 60%;
         }
       }
@@ -1015,21 +1050,24 @@
     }
   }
 
-  .reviews{
-    &_top{
+  .reviews {
+    &_top {
       flex-direction: column;
       gap: 40px;
     }
-    &_text{
+
+    &_text {
       max-width: none;
     }
-    &_img{
-      &::after{
+
+    &_img {
+      &::after {
         width: 370px;
         height: 300px;
         bottom: -40px;
       }
-      & img{
+
+      & img {
         height: 200px
       }
     }
@@ -1038,19 +1076,22 @@
 
 @media(max-width: 680px) {
   .presa {
-    &-banner{
-      &__image{
+    &-banner {
+      &__image {
         display: none;
       }
     }
-    &-pay{
+
+    &-pay {
       padding-top: 30px;
       padding-bottom: 25px;
       padding-left: 1rem;
-      &__button{
+
+      &__button {
         padding: 10px 0;
       }
     }
+
     &-banner {
       background-size: cover;
     }
@@ -1060,9 +1101,10 @@
       grid-template-columns: 1fr;
     }
 
-    &_counter{
+    &_counter {
       max-width: 100%;
-      &-title{
+
+      &-title {
         font-size: 16px;
       }
     }
@@ -1107,19 +1149,20 @@
   .results {
     position: relative;
 
-    &_title {
-      padding: 1.5rem 0 0 0;
-    }
+    // &_title {
+    //   padding: 1.5rem 0 0 0;
+    // }
 
     &_info {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 
       &-img {
-        position: absolute;
-        width: 70px;
-        top: 1rem;
-        right: 3rem;
+        // position: absolute;
+        // width: 70px;
+        // top: 1rem;
+        // right: 3rem;
+        display: none;
       }
     }
   }
@@ -1144,12 +1187,13 @@
     }
   }
 
-  .reviews{
-    &_review{
-      &-name{
+  .reviews {
+    &_review {
+      &-name {
         font-size: 1rem;
       }
-      &-tariff{
+
+      &-tariff {
         font-size: 0.9em;
       }
     }
@@ -1171,9 +1215,9 @@
     }
   }
 
-  .order{
-    &_form{
-      &-row{
+  .order {
+    &_form {
+      &-row {
         grid-template-columns: repeat(1, 1fr);
       }
     }
@@ -1183,10 +1227,11 @@
 @media(max-width: 535px) {
   .presa {
     padding-top: 5.5rem;
-    
-    &-pay{
+
+    &-pay {
       padding-right: 1rem;
-      &__img{
+
+      &__img {
         top: 76%;
         width: 160px;
       }
@@ -1200,8 +1245,8 @@
       }
     }
 
-    &_counter{
-      &-time{
+    &_counter {
+      &-time {
         font-size: 2rem;
         width: 65px;
         height: 70px;
@@ -1242,7 +1287,7 @@
       position: relative;
       background-image: none !important;
 
-      &.wide .experts_item__desc{
+      &.wide .experts_item__desc {
         max-width: 100%;
       }
 
@@ -1282,7 +1327,7 @@
         right: 0;
         top: 0;
 
-        &.small img{
+        &.small img {
           height: 100%;
         }
 
@@ -1304,12 +1349,13 @@
     }
   }
 
-  .reviews{
-    &_img img{
+  .reviews {
+    &_img img {
       width: 190px;
     }
-    &_img{
-      &::after{
+
+    &_img {
+      &::after {
         width: 320px;
         height: 250px;
         bottom: -10px;
@@ -1323,38 +1369,44 @@
   .presa {
     padding-top: 4.5rem;
 
-    &-pay{
-      &__button{
+    &-pay {
+      &__button {
         width: calc(100% - 110px);
       }
     }
 
-    &_counter{
+    &_counter {
       padding: 1.1rem 0.55rem;
       gap: 12px;
-      &-time{
+
+      &-time {
         font-size: 1.3rem;
         width: 38px;
         height: 50px;
       }
-      &-title{
+
+      &-title {
         font-size: 11px;
       }
-      &-cover{
+
+      &-cover {
         gap: 10px;
       }
-      &-text{
+
+      &-text {
         font-size: 10px;
       }
     }
   }
-  .reviews{
-    &_review{
-      &-top{
+
+  .reviews {
+    &_review {
+      &-top {
         flex-direction: column;
         align-items: start;
       }
-      &-stars{
+
+      &-stars {
         order: -1;
         margin-bottom: 5px;
       }
@@ -1362,10 +1414,10 @@
   }
 }
 
-@media(max-width: 420px){
-  .presa{
-    &-pay{
-      &__img{
+@media(max-width: 420px) {
+  .presa {
+    &-pay {
+      &__img {
         top: 80%;
       }
     }

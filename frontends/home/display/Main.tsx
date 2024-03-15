@@ -15,10 +15,10 @@ export default function () {
     <main class="wrapper">
       <Presa />
       <Advantages />
-      <Experts />
       <Program />
       <Results />
       <Rates />
+      <Experts />
       <ScrollTop />
       <Question />
       <Reviews />
