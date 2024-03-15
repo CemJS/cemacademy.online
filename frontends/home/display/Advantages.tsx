@@ -1,18 +1,19 @@
 import { Cemjsx, Static, Ref, Fn, front, Func } from "cemjs-all"
-import advantages from 'json/advantages.json'
+// import advantages from 'json/advantages.json'
+import specialFor from 'json/specialFor.json'
 
 
 export default function () {
   return (
     <section class="section advantages_section" id="advanteges">
-      <h2 class="title-section">Преимущества обучения в академии Crypto Emergency</h2>
+      <h2 class="title-section">Этот курс специально для те, кто:</h2>
       <ul class="advantages">
         {
-          advantages.map((item, index) => {
+          specialFor.map((item, index) => {
             return (
               <li class="advantages_item">
                 <span class="advantages_item__title">{`${index + 1}. ${item.title}`}</span>
-                <p class="text">{item.text}</p>
+                {/* <p class="text">{item.text}</p> */}
               </li>
             )
           })

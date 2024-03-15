@@ -18,7 +18,10 @@
   // --radial_gradient: radial-gradient(circle 50% 50%, #BAEDB2, transparent);
   --radial_gradient: radial-gradient(ellipse 50% 50%, #BAEDB2, transparent);
 
-
+  // transition
+  --tran-03: all .3s ease-in-out;
+  --tran-05: all .5s ease-in-out;
+  --tran-015: all .15s ease-in-out;
 
   --gap: 2vw;
   --padding: 3vw;

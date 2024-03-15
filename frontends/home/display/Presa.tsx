@@ -21,7 +21,7 @@ export default function () {
                 <br />
                 на криптовалютном рынке.
                 <br />
-                Крипто-Поток 2.0
+                Крипто-Поток 3.0
               </span>
             </h1>
             {Static.timer.total < 0 ? (
