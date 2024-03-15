@@ -9,6 +9,7 @@ import ScrollTop from "./ScrollTop";
 import Question from "./Question";
 import Reviews from "./Reviews";
 import OrderForm from "./OrderForm";
+import Faq from "./Faq";
 
 export default function () {
   return (
@@ -23,6 +24,7 @@ export default function () {
       <Question />
       <Reviews />
       <OrderForm />
+      <Faq />
     </main>
   );
 }
