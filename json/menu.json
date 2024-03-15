@@ -1,9 +1,5 @@
 [
   {
-    "name": "Эксперты",
-    "link": "#experts"
-  },
-  {
     "name": "Программа",
     "link": "#program"
   },
@@ -14,5 +10,9 @@
   {
     "name": "Тарифы",
     "link": "#rates"
+  },
+  {
+    "name": "Эксперты",
+    "link": "#experts"
   }
 ]

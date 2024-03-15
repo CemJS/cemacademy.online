@@ -6,7 +6,7 @@ import specialFor from 'json/specialFor.json'
 export default function () {
   return (
     <section class="section advantages_section" id="advanteges">
-      <h2 class="title-section">Этот курс специально для те, кто:</h2>
+      <h2 class="title-section">Этот курс специально для тех, кто:</h2>
       <ul class="advantages">
         {
           specialFor.map((item, index) => {
