@@ -7,7 +7,9 @@ import presaBg from "@images/payBg.png";
 
 export default function () {
 	return (
-		<section class="presa section" ref="mainSection">
+		<section
+			class="presa section"
+			ref="mainSection">
 			<div class="presa-banner_over">
 				<div class="presa-banner">
 					<div class="presa-banner_desc">
@@ -24,7 +26,9 @@ export default function () {
 						{Static.timer.total < 0 ? (
 							<div class="presa_time">
 								<p class="text">Старт продаж 12.04.2024</p>
-								<button class="btn btn__green" onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на вебинар" })}>
+								<button
+									class="btn btn__green"
+									onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на вебинар" })}>
 									Записаться
 								</button>
 							</div>
@@ -49,7 +53,11 @@ export default function () {
 										<p class="presa_counter-text">Секунд</p>
 									</div>
 								</div>
-								<img src={counterBg} alt="Второй поток" class="presa_counter-bg" />
+								<img
+									src={counterBg}
+									alt="Второй поток"
+									class="presa_counter-bg"
+								/>
 							</div>
 						)}
 						<p class="text">
@@ -57,27 +65,48 @@ export default function () {
 							{/* <img class="presa_icon" src={logoCem} alt="Crypto Emergency" /></p> */}
 						</p>
 					</div>
-					<img class="presa-banner__image" src={logoBig} alt="Academy Crypto Emergency" />
+					<img
+						class="presa-banner__image"
+						src={logoBig}
+						alt="Academy Crypto Emergency"
+					/>
 				</div>
 			</div>
 			<div class="presa-pay">
-				<p class="presa-pay__info">
+				<div class="presa-pay__info presa-pay__old">Старт 3-го потока 20 мая</div>
+				<p class="presa-pay__info presa-pay__info_small">
 					Оплати <span class="presa-pay__discount">25%</span> и забронируй место по <span class="presa-pay__old">СТАРОЙ</span> цене!!
-					<button onclick={() => Fn.initOne("modalOrder", { title: "Оплати 25% и забронируй место по старой цене" })} class="presa-pay__button">
+					<button
+						onclick={() => Fn.initOne("modalOrder", { title: "Оплати 25% и забронируй место по старой цене" })}
+						class="presa-pay__button">
 						Оплатить
 					</button>
 				</p>
-				<img src={presaHand} alt="Скидка" class="presa-pay__img" />
-				<img src={presaBg} alt="Скидка" class="presa-pay__bg" />
+				<img
+					src={presaHand}
+					alt="Скидка"
+					class="presa-pay__img"
+				/>
+				<img
+					src={presaBg}
+					alt="Скидка"
+					class="presa-pay__bg"
+				/>
 			</div>
 			<div class="presa-academy">
 				<div class="presa-academy_item">
 					<h3 class="presa-academy_item-title">Академия Crypto Emergency</h3>
-					<p class="text">Образовательное учреждение, созданное компанией Crypto Emergency, ведущим игроком в сфере криптовалют и блокчейн технологий. Наша академия предлагает широкий спектр обучающих программ и курсов, разработанных опытными специалистами в области криптовалют и блокчейн.</p>
+					<p class="text">
+						Образовательное учреждение, созданное компанией Crypto Emergency, ведущим игроком в сфере криптовалют и блокчейн технологий. Наша академия предлагает широкий спектр обучающих программ и
+						курсов, разработанных опытными специалистами в области криптовалют и блокчейн.
+					</p>
 				</div>
 				<div class="presa-academy_item">
 					<h3 class="presa-academy_item-title">Почему стоит выбрать академию Crypto Emergency? </h3>
-					<p class="text">Мы предлагаем качественное образование, основанное на опыте и экспертизе в сфере криптовалют и блокчейн. Наша академия поможет вам получить необходимые знания и навыки для успешной карьеры в этой быстро развивающейся области. Присоединяйтесь к нам и начните свой путь к успеху в мире криптовалют и блокчейн технологий!</p>
+					<p class="text">
+						Мы предлагаем качественное образование, основанное на опыте и экспертизе в сфере криптовалют и блокчейн. Наша академия поможет вам получить необходимые знания и навыки для успешной карьеры
+						в этой быстро развивающейся области. Присоединяйтесь к нам и начните свой путь к успеху в мире криптовалют и блокчейн технологий!
+					</p>
 				</div>
 			</div>
 		</section>

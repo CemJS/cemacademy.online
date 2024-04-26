@@ -90,13 +90,20 @@
 		overflow: hidden;
 		border-radius: var(--borderR);
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
 
 		&__info {
 			color: var(--black);
 			font-family: ProstoOne;
 			font-size: clamp(1.5rem, 3vw, 2.75rem);
 			font-weight: 400;
-			line-height: 164%;
+			line-height: 155%;
+			&_small {
+				font-size: clamp(1.2rem, 3vw, 2.2rem);
+				line-height: 164%;
+			}
 		}
 
 		&__discount {
@@ -116,11 +123,11 @@
 			background-color: var(--white);
 			padding: 13px 0;
 			border-radius: 2.5rem;
-			width: 22rem;
+			width: 17rem;
 			border: none;
 			color: var(--fiolet_black);
 			font-family: Montserrat;
-			font-size: clamp(1rem, 2vw, 1.875rem);
+			font-size: clamp(1rem, 2vw, 1.6rem);
 			font-weight: 700;
 			line-height: 134.4%;
 			cursor: pointer;
