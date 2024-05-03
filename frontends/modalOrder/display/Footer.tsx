@@ -29,7 +29,7 @@ export default function () {
                             comment: Static.form.comment.value ? Static.form.comment.value : "",
                         }
                     }
-                    let answer = await front.Services.functions.sendApi("/api/tg/cem-academy", data)
+                    let answer = await front.Services.functions.sendApi("https://message.cem.su/cem-academy", data)
 
                     if (answer.error) {
                         Fn.initOne("modalNotify", {
