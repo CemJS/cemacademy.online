@@ -1,0 +1,15 @@
+.thanks {
+	top: 30%;
+	padding-top: 10px;
+	text-align: center;
+	&__img {
+		width: 100%;
+		max-width: 200px;
+	}
+	&__text {
+		display: inline-block;
+		text-align: center;
+		font-size: clamp(1.5rem, 4vw, 4rem);
+		font-weight: bold;
+	}
+}
