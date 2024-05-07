@@ -3,7 +3,7 @@ import thanks from "@svg/thanks.svg";
 
 export default function () {
 	return (
-		<div class="error_wrap thanks">
+		<div class="thanks">
 			<img
 				class="thanks__img"
 				src={thanks}
