@@ -357,9 +357,7 @@
 		&.wide {
 			grid-column: span 2;
 
-			& .experts_item__desc {
-				max-width: 77%;
-			}
+			padding-right: 150px;
 		}
 
 		&__user {
@@ -1026,9 +1024,7 @@
 			&.wide {
 				grid-column: 1;
 
-				& .experts_item__desc {
-					max-width: 60%;
-				}
+				padding-right: unset;
 			}
 
 			&__skills {
