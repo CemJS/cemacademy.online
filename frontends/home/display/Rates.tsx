@@ -4,14 +4,14 @@ import rates from 'json/rates.json'
 export default function () {
   return (
     <section class="section" id="rates">
-      <h2 class="title-section">Тарифы</h2>
+      <h2 class="title-section">Тариф</h2>
       <div class="rates">
         {
           rates.map(item => {
             return (
               <div class={["rates_item", `rates_item__${item.color}`]}>
                 <div>
-                  <h3 class="rates_item-title">{item.title}</h3>
+                  {/* <h3 class="rates_item-title">{item.title}</h3> */}
                   <ul class="rates_item-list">
                     {
                       item.about.map(el => {
