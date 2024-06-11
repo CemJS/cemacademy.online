@@ -10,7 +10,10 @@ export default function () {
 			<div class="experts">
 				{experts.map((item) => {
 					return (
-						<div class={["experts_item", item.wide ? "wide" : null]}>
+						<div class={[
+							"experts_item", 
+							// item.wide ? "wide" : null
+							]}>
 							<div class={["experts_item__user", item.small ? "small" : null]}>
 								<img
 									style={item.fit ? "object-fit:contain;" : ""}

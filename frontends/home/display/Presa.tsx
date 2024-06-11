@@ -25,7 +25,7 @@ export default function () {
 						</h1>
 						{Static.timer.total < 0 ? (
 							<div class="presa_time">
-								<p class="text">Старт продаж 12.04.2024</p>
+								{/* <p class="text">Старт продаж 12.04.2024</p> */}
 								<button
 									class="btn btn__green"
 									onclick={() => Fn.initOne("modalOrder", { title: "Записывайтесь на вебинар" })}>
@@ -73,7 +73,7 @@ export default function () {
 				</div>
 			</div>
 			<div class="presa-pay">
-				<div class="presa-pay__info presa-pay__old">Старт 3-го потока 20 мая</div>
+				<div class="presa-pay__info presa-pay__old">Старт 3-го потока</div>
 				<p class="presa-pay__info presa-pay__info_small">
 					Оплати <span class="presa-pay__discount">25%</span> и забронируй место по <span class="presa-pay__old">СТАРОЙ</span> цене!!
 					<button
