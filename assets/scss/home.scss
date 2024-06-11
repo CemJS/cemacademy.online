@@ -591,10 +591,12 @@
 
 // ===RATES===
 .rates {
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
-	grid-template-columns: repeat(3, 1fr);
+	// display: -ms-grid;
+	// display: grid;
+	// -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
+	// grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	justify-content: center;
 	gap: 1rem;
 
 	&_item {
