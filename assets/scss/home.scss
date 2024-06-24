@@ -367,8 +367,8 @@
 
 			& img {
 				position: absolute;
-				bottom: 0;
-				right: 0;
+				bottom: -1px;
+				right: -11px;
 				width: 200px;
 				object-fit: cover;
 				float: right;
