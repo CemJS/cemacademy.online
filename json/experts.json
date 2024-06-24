@@ -63,5 +63,23 @@
 		"wide": "true",
 		"small": "true",
 		"fit": "contain"
+	},
+	{
+		"name": "Эдуард Ямилов",
+		"skills": "",
+		"desc": "Региональный маркетинг-менеджер Bitget. Занимался региональным маркетингом и отвечал за рост ключевых метрик в СНГ-команде Binance",
+		"img": "/contents/experts/eduard.png",
+		"wide": "true",
+		"small": "true",
+		"fit": "contain"
+	},
+	{
+		"name": "Сергей Спиренков",
+		"skills": "",
+		"desc": "Вице-президент по развитию бизнеса BitOK",
+		"img": "/contents/experts/vk.png",
+		"wide": "true",
+		"small": "true",
+		"fit": "contain"
 	}
 ]
