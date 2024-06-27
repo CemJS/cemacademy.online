@@ -34,8 +34,8 @@
         "text": "длительность курса 2 месяца"
       }
     ],
-    "price": "90 000 руб.",
+    "price": "100 000 руб.",
     "color": "yellow",
-    "link": "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=CryptoEmergencyAcademy&InvId=0&Culture=ru&Encoding=utf-8&Description=%D0%A2%D0%B0%D1%80%D0%B8%D1%84%20%D0%A0%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9&OutSum=90000&shp_interface=link&SignatureValue=c76e92286b2d25d3d520a1fa5de90295"
+    "link": "https://auth.robokassa.ru/merchant/Invoice/Q_qdSKoc4kGaKen-sjQRjQ"
   }
 ]
