@@ -72,7 +72,7 @@ export default function () {
 					/>
 				</div>
 			</div>
-			<div class="presa-pay">
+			{/* <div class="presa-pay">
 				<div class="presa-pay__info presa-pay__old">Старт 3-го потока</div>
 				<p class="presa-pay__info presa-pay__info_small">
 					Оплати <span class="presa-pay__discount">25%</span> и забронируй место по <span class="presa-pay__old">СТАРОЙ</span> цене!!
@@ -92,7 +92,7 @@ export default function () {
 					alt="Скидка"
 					class="presa-pay__bg"
 				/>
-			</div>
+			</div> */}
 			<div class="presa-academy">
 				<div class="presa-academy_item">
 					<h3 class="presa-academy_item-title">Академия Crypto Emergency</h3>
